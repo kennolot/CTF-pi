@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  web_hack:
+    build: .
+    ports:
+      - "8080:80"
