@@ -23,7 +23,7 @@ While inside the current directory run from the console to start the webapp
 
 ### Cleaning up
 
-When done with the tasks run `cleanup_ctf.sh` in the `CTF-pi/`
+When done with the tasks run `docker-compose down` to remove the containers and other ctf files
 
 ### Steps to complete
 

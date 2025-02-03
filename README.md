@@ -22,4 +22,4 @@ Introduce challenges with other hardware peripherals like touch screens and code
 4. Read `manualx_x.md` for further setup and steps to solve
 5. Find a hidden flag to complete the challenge
 
-6. After using make sure to stop the containers and remove the CTF files if they are no longer necessary, can be done either manually or via `cleanup_ctf.sh`
+6. After using make sure to stop the containers and remove the CTF files if they are no longer necessary, can be done either manually or via `docker-compose down`
