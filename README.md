@@ -1,6 +1,6 @@
-# CTF-pi
+# 🦴 CTF-pi 🦴
 
-## **WORK IN PROGRESS**
+## **WORK IN PROGRESS** 👷
 
 **Contains manuals and containers to turn your RaspBerry PI into a CTF box. WARNING: THIS WILL MAKE YOUR RASPBERRY PI INSECURE!!!**
 
