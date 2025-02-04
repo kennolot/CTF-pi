@@ -1,0 +1,7 @@
+usage User:Pass ceo:bestcompany12345 mick:$$$money ratchet:6321password ctfpi:CTFPI{hard_encryption?}
+Callback Error line 423
+
+"testing variable"
+"function works1"
+
+"function works3"
