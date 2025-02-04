@@ -1,0 +1,34 @@
+Starting the logger
+Time is 10:37:32
+Sat/15/2025
+
+7 Users authenticated
+
+ERROR: variable on line 373 "bathe" is float, but is assigned a character.
+	throw exception
+	continue operation
+
+ERROR: user tried modifying const variable on line 810 "formula"
+	throw exception
+	continue operation
+
+WARNING: user input not received line 1002
+	using default values
+
+TRACE: user "will04" connection refused
+TRACE: user "ceo" connection refused
+TRACE: user "ceo" connection accepted
+
+TRACE: user "ceo" user_input_name = CEO
+TRACE: user "ceo" user_input_password = bestcompanyEVER123
+
+TRACE: user "ceo" authentication failed.
+
+TRACE: user "ceo" user_input_name = CEO
+TRACE: user "ceo" user_input_password = BestcompanyEVER12345
+
+TRACE: user "ceo" LOGGED IN.
+
+TRACE: var1: 4.22 var2: NaN var3: 548
+
+CTFPI{H44ystack_ndlz}
