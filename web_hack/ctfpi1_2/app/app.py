@@ -1,9 +1,5 @@
-### !!!!
-### IN THIS SCENARIO THE CODE WOULDN'T BE AVAILABLE
-### !!!
-### Still it is great to analyze the security flaws.
-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
+import os
 import random
 
 app = Flask(__name__)
@@ -31,15 +27,21 @@ def debug():
         * Debugger PIN: 123-456-789
         127.0.0.1 - - [05/Feb/2025 10:23:45] GET / HTTP/1.1 200 -
         127.0.0.1 - - [05/Feb/2025 10:23:47] GET /favicon.ico HTTP/1.1" 404 -
+        +++ System Ping Enabled +++
+        + uses ping command via terminal (os.popen) +
     """
-    with open("flag.txt", "r") as f:
-        flag = f.read().strip()
-
     return jsonify({
         "debug_mode": True,
-        "debug_msg": debug_msg,
-        "flag": flag        
+        "debug_msg": debug_msg
     })
+
+@app.route("/ping", methods=["GET"])
+def ping():
+    target = request.args.get("ip", "")
+    print(f"Executing: ping -c 1 {target}")    
+    response = os.popen(f"ping -c 1 {target}").read()
+    print(f"Response: {response}")    
+    return f"<pre>{response}</pre>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
