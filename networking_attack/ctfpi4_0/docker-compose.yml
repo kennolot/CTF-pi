@@ -1,0 +1,5 @@
+version: "3.8"
+services:
+  networking1:
+    build: .
+    network_mode: "host"
