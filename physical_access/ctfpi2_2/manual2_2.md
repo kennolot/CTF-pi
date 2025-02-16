@@ -33,14 +33,16 @@ After setting up the BadUSB device, we are now ready to write our own simple pay
 Open up a text editor(even Notepad is fine) and name it `payload.dd`.
 
 Into the `payload.dd` we can start writing our malicious script.
-I have provided an example in this directory of a working solution, but you are free to experiment on your own
+I have provided an example in this directory of a working solution*, but you are free to experiment on your own
+
 
 Docs page for bunch of useful Duckyscript commands: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
 
 Valid solutions could also utilise netcat(`nc`), using `scp` or writing the flag.txt onto the BadUSB storage.
 
 When using the example provided we can see it uses python http.server to display the flag.txt on our local network server.
-We can simply visit out local address and flag.txt file should be hosted there, containing our answer.
+To view the address the server is at we run `hostname -I` from the Raspberry Pi remote connection ex. 10.10.10.24 so it's at http://10.10.10.24:8000.
+We can simply visit local address we have and flag.txt file should be hosted there, containing our answer.
 
 
 ## Cleaning up
