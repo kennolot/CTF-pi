@@ -8,7 +8,7 @@ REM Open the raspi terminal
 CONTROL ALT t
 DELAY 1000
 
-STRING cd ~
+STRING cd $HOME
 ENTER
 DELAY 500
 
