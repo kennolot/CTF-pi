@@ -23,6 +23,7 @@ For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Aust
 
 When using Raspberry Pico, we need to download https://github.com/dbisu/pico-ducky and follow the instructions provided on this page.
 
+Run the following commands on Raspberry Pi when inside the directory that contains this manual `cp answers/flag.txt ~`
 
 
 ## Steps to complete
@@ -40,3 +41,9 @@ Valid solutions could also utilise netcat(`nc`), using `scp` or writing the flag
 
 When using the example provided we can see it uses python http.server to display the flag.txt on our local network server.
 We can simply visit out local address and flag.txt file should be hosted there, containing our answer.
+
+
+## Cleaning up
+
+When you are done just delete the flag from the home directory:
+`rm ~/flag.txt` 
