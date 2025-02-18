@@ -1,1 +1,1 @@
-### Bad usb with pico
+## Physical Access - Reading from GPIO

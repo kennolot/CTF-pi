@@ -20,6 +20,14 @@ The challenges differ from classic online CTFs by: introducing challenges where 
 Introduce challenges with other hardware peripherals like touch screens and code locks for attackers to bypass their security.
 
 
+## General guidelines when completing the challenges
+
+For some challenges you will see a folder called 'answers', within is a flag.txt that contains the answer. This is used when building the docker container to fetch the flag. 
+
+Do not read the answer from answers/ since it defeats the purpose of solving the challenge.
+
+Exception is that some challenges tell you to look at the answer to verify you've found the correct flag. That is mentioned in that task's manual.
+
 ## How to run CTF-pi
 
 1. Clone the repository onto your Raspberry Pi

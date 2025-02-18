@@ -1,4 +1,4 @@
-## 1_2 webapp with flask part 2
+## Vulnerable flask webapp - 2
 
 ** Please make sure you have a backup, this challenge can be potentially destructive with user error **
 
@@ -8,12 +8,10 @@ You found the debug message, and you have been given the source code for the web
 
 ### Requirements
 
-1x RaspBerry Pi
-1x RaspBerry Pi Power supply
-1x SD-card and Operating System installed (Preferred Raspberry Pi OS)
+1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
 
-Raspi connected to your router via wireless or cable
-Remote access to Raspi using Raspberry Pi connect, VNC etc.. (to run the docker)
+* Raspi connected to your router via wireless or cable
+* Remote access to Raspi using Raspberry Pi connect, VNC etc.. (to run the docker)
 
 ### Prerequisites
 
@@ -27,7 +25,7 @@ While inside the current directory run from the console to start the webapp
 
 When done with the tasks run `docker-compose down` to remove the containers and other ctf files
 
-### *Hints*
+### **Hints**
 
 Open up the app.py in this directory. There's an interesting comment left behind
 

@@ -1,20 +1,22 @@
-### Initial breach 3_0
+## Searching the logs - 1
 
-## Scenario
+### Scenario
 
 Now you are put into the attacker's shoes, you have gained access either remotely or physically to a security flawed IoT device. Unfortunately for the attacker the device is running in low privilege
 mode and there's not a lot of things we can do currently. However we notice a strange folder we have access to called "device_logs" maybe it's worth looking into that?
 
-## Requirements
+### Requirements
 
 Can be done from your main machine, or on your Pi.
 
-## Prerequisites
+### Prerequisites
 
-Have cloned this repository and are inside the `ctfpi3_0` directory
+Have cloned this repository and are inside the `ctfpi5_0` directory
+
+Open the `device_logs` folder and you will see bunch of gibberish.
 
 
-## **Hints**
+### **Hints**
 
 Seems like there are a lot of logs and random junk folders to be searching manually, maybe we can user linux terminal commands for this?
 

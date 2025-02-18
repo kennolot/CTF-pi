@@ -1,4 +1,4 @@
-## 1_0 web
+## Vulnerable web app - 1
 
 ### Scenario 
 
@@ -6,12 +6,10 @@ You are at your friend's house and notice a Raspberry Pi running, you ask your f
 
 ### Requirements
 
-1x RaspBerry Pi
-1x RaspBerry Pi Power supply
-1x SD-card and Operating System installed (Preferred Raspberry Pi OS)
+1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
 
-Raspi connected to your router via wireless or cable
-Remote access to Raspi using Raspberry Pi connect, VNC etc..
+* Raspi connected to your router via wireless or cable
+* Remote access to Raspi using Raspberry Pi connect, VNC etc..
 
 ### Prerequisites
 
