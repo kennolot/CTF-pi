@@ -28,6 +28,8 @@ Do not read the answer from answers/ since it defeats the purpose of solving the
 
 Exception is that some challenges tell you to look at the answer to verify you've found the correct flag. That is mentioned in that task's manual.
 
+The shell scripts and Dockerfile + docker-compose.yml are only for building the tasks unless specified otherwise. They might spoil the challenge so be aware of that when looking at them. It is always a good practice to review unknown code.
+
 ## How to run CTF-pi
 
 1. Clone the repository onto your Raspberry Pi

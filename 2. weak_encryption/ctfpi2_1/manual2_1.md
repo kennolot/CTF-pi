@@ -8,13 +8,13 @@ Find out what encryption is used now and try to decode them.
 Flag format is `CTFPI{lowercase}` add filters to your cracking software and you will get faster decoding times, you only need to crack the lowercase part
 'CTFPI{}' is not part of decoded result
 
-### Requirements
+### Prerequisites
 
 Can be done from your main machine, or on your Pi.
 
-### Prerequisites
+Have cloned this repository and are inside the `ctfpi2_1` directory
 
-Have cloned this repository and are inside the `ctfpi3_1` directory
+### Requirements
 
 Open the files ex `log1.txt` and try to crack the code
 

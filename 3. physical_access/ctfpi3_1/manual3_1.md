@@ -9,15 +9,15 @@ We have overheard someone and know that the `flag.txt` is inside the pi home dir
 
 In this scenario we are building our own BadUSB, a device when plugged into another device(Raspberry Pi in our case) delivers malware, executes malicious commands etc. By the end of this we will see that even a device that is completely offline or otherwise unreachable is still possible to exploit with exposed USB ports.
 
-### Requirements
+### Prerequisites
 
-1x ** Raspberry Pico ** or equivalent like Arduino etc.
+1x **Raspberry Pico** or equivalent like Arduino etc.
 
 1x A data transmitting USB A -> Micro USB(Typically) cable or an adapter.
 
-1x Raspberry Pi
+1x Raspberry Pi as the victim device.
 
-### Prerequisites
+### Requirements
 
 For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Austin's Lab)
 
@@ -33,8 +33,9 @@ After setting up the BadUSB device, we are now ready to write our own simple pay
 Open up a text editor(even Notepad is fine) and name it `payload.dd`.
 
 Into the `payload.dd` we can start writing our malicious script.
-I have provided an example in this directory of a working solution*, but you are free to experiment on your own
+I have provided an example in this directory of a working solution, but you are free to experiment on your own
 
+After the payload is written simply make sure the BadUSB is NOT in setup mode and plug it into the USB port of Raspberry Pi, your script should execute on its own.
 
 Docs page for bunch of useful Duckyscript commands: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
 
