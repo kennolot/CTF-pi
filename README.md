@@ -22,11 +22,8 @@ Introduce challenges with other hardware peripherals like touch screens and code
 
 ## General guidelines when completing the challenges
 
-For some challenges you will see a folder called 'answers', within is a flag.txt that contains the answer. This is used when building the docker container to fetch the flag. 
+For some challenges you will see a folder called 'answers', within is a flag.txt that contains the answer. Some challenges also provide a solution of some sort. Both of these should be viewed after completing the challenge.
 
-Do not read the answer from answers/ since it defeats the purpose of solving the challenge.
-
-Exception is that some challenges tell you to look at the answer to verify you've found the correct flag. That is mentioned in that task's manual.
 
 The shell scripts and Dockerfile + docker-compose.yml are only for building the tasks unless specified otherwise. They might spoil the challenge so be aware of that when looking at them. It is always a good practice to review unknown code.
 
