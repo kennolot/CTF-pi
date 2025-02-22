@@ -4,20 +4,18 @@
 
 You are at your friend's house and notice a Raspberry Pi running, you ask your friend about it and he says it's for automating things around the house, not revealing much details about it, however he says the control panel is password protected and he is using php to verify the users. He wants you to try break into his "control panel" and find a hidden text file within. He opens up his laptop and opens the remote connection to Pi, now it's tme for you to attempt to break into the web application.
 
-### Requirements
-
-1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
-
-* Raspi connected to your router via wireless or cable
-* Remote access to Raspi using Raspberry Pi connect, VNC etc..
 
 ### Prerequisites
 
-Docker and docker-compose.
+Raspberry Pi powered on. Preferably running Raspberry Pi OS.
 
-While inside the current directory run from the console to start the webapp
+Raspi connected to your router via wireless or cable
 
-`docker-compose up --build -d`
+Have cloned this repository and are inside the `ctfpi4_0` directory
+
+### Requirements
+
+Run `docker-compose up --build -d`
 
 ### Cleaning up
 

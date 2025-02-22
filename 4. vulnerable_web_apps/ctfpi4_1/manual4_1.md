@@ -5,16 +5,14 @@
 You are auditing the security in a factory, as you got a tour before the audit you that a bunch of screens had some sensor data on them, is it possible to reach that and possibly
 find a weakness where ever it is hosted.
 
-### Requirements
-
-1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
-
-* Raspi connected to your router via wireless or cable
-* Remote access to Raspi using Raspberry Pi connect, VNC etc.. (to run the docker)
 
 ### Prerequisites
 
-Docker and docker-compose.
+1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
+
+Raspi connected to your router via wireless or cable
+
+### Requirements
 
 While inside the current directory run from the console to start the webapp
 

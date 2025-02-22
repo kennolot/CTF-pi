@@ -6,16 +6,13 @@
 
 You found the debug message, and you have been given the source code for the web `app.py` (in this repository), read over the source code and see if you can find something weak to get further access to the system.
 
-### Requirements
-
-1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
-
-* Raspi connected to your router via wireless or cable
-* Remote access to Raspi using Raspberry Pi connect, VNC etc.. (to run the docker)
-
 ### Prerequisites
 
-Docker and docker-compose.
+Raspberry Pi powered on. Preferably running Raspberry Pi OS
+
+Raspi connected to your router via wireless or cable
+
+### Requirements
 
 While inside the current directory run from the console to start the webapp
 

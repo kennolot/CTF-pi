@@ -4,26 +4,24 @@
 
 While doing your audits you found an open port `1337` broadcasting on a Raspberry pi. You know it's broadcasting because every device inside the network saw data coming to `1337`. Can you figure out what data is being transmitted to all devices within the network?
 
-### Requirements
-
-1x Raspberry Pi powered on. Preferably running Raspberry Pi OS.
-
-* Raspi connected to your router via wireless or cable
-* Remote access to Raspi using Raspberry Pi connect, VNC etc.. (to run the docker)
-
-* Laptop or Desktop PC to be used for scanning the network. With WiFi.
-
 ### Prerequisites
 
-* Docker and docker-compose.
+Raspberry Pi powered on. Preferably running Raspberry Pi OS.
+
+Raspi connected to your router via wireless or cable
+
+Laptop or Desktop PC to be used for scanning the network.
+
+Install wireshark onto your laptop/PC
+
+!! Make sure you are on the same interface as the Raspberry. If Raspberry is connected to WiFi, then should your host machine too !!
+
+### Requirements
 
 While inside the current directory and on Pi run from the console:
 
 `docker-compose up --build -d`
 
-* Install wireshark onto your laptop/PC
-
-!! Make sure you are on the same interface as the Raspberry. If Raspberry is connected to WiFi, then should your host machine too !!
 
 ### Cleaning up
 

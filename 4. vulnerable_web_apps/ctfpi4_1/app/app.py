@@ -13,7 +13,7 @@ app.config["DEBUG"] = True
 
 @app.route("/")
 def index():
-    numbers = [random.randint(1, 100) for _ in range(10)]
+    numbers = random.sample(range(1, 101), 10)
     return jsonify({
         "message": "DEV message: debug mode active",
         "very important sensor reading": numbers

@@ -6,7 +6,7 @@ COPY source/broadcast.py .
 
 COPY answers/flag.txt .
 
-RUN chmod 600 flag.txt
+RUN chmod 400 flag.txt
 
 EXPOSE 1337
 
