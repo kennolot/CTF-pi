@@ -10,7 +10,7 @@ $message = "Enter the password to retrieve the flag.";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['password']) && $_POST['password'] === 'admin123') {
-        $message = "Flag: " . htmlspecialchars($flag);
+        $message = "Flag: " . $flag;
     } else {
         $message = "Wrong password!";
     }

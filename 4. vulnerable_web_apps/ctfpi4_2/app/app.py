@@ -9,7 +9,7 @@ app.config["DEBUG"] = True
 
 @app.route("/")
 def index():
-    numbers = [random.randint(1, 100) for _ in range(10)]
+    numbers = random.sample(range(1, 101), 10)
     return jsonify({
         "message": "DEV message: debug mode active",
         "very important sensor reading": numbers
@@ -37,11 +37,9 @@ def debug():
 
 @app.route("/ping", methods=["GET"])
 def ping():
-    target = request.args.get("ip", "")
-    print(f"Executing: ping -c 1 {target}")    
+    target = request.args.get("ip", "")      
     response = os.popen(f"ping -c 1 {target}").read()
     print(f"Response: {response}")    
     return f"<pre>{response}</pre>"
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+app.run(host="0.0.0.0", port=8080, debug=True)
