@@ -18,4 +18,9 @@ fi
 
 sudo useradd -ms /bin/bash "$username"
 
-# finish from here
+echo "$username:$password" | sudo chpasswd
+
+sudo cp ./answers/flag.txt "/home/$username/flag.txt"
+
+sudo chown "$username":"$username" "/home/$username/flag.txt"
+sudo chmod 400 "/home/$username/flag.txt"
