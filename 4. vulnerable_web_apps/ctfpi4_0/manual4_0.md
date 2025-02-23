@@ -17,12 +17,18 @@ Have cloned this repository and are inside the `ctfpi4_0` directory
 
 Run `docker-compose up --build -d`
 
+`hostname -I` and enter one of the IPs there along with the port into your browser on your main machine.
+
+or
+
+Complete it inside your Raspi using VNC, raspi connect, etc.
+
 ### Cleaning up
 
 When done with the tasks run `docker-compose down` to remove the containers and other ctf files
 
 ### Steps to complete
 
-With the remote screen share working we first need to know what IP locally the web app is running, for that we run `ifconfig` from the terminal if we're using wireless then we look at `wlan0` `inet`. We enter the IP and since we know it's a web application we can add a port 80 or 8080 to access the http web server(make sure you are at http, not https for this challenge).
+We enter the IP the web server is running on and since we know it's a web application we can add a port 8080 to access the http web server(make sure you are at http, not https for this challenge).
 
 Now we should be greeted by a password prompt, our friend mentioned something about php, so we should check if we can reach the index.php. For that we can try adding `/index.php?source=1` after the port, so our current query looks something like `http://10.10.10.12:8080/index.php?source=1`. Now we are able to see a source code and see the hardcoded password within, try entering it into the password prompt and we should get the flag.
