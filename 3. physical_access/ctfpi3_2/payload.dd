@@ -1,0 +1,7 @@
+REM This script will take a screenshot from raspi device with
+REM exposed USB ports
+REM Saves the image 
+
+DELAY 1000
+
+REM Your code starts here.

