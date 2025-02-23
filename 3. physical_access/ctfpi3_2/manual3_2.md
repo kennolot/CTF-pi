@@ -24,9 +24,7 @@ Plug in pico-usb into the raspi and retrieve the screenshot.
 
 ## **Hints**
 
-PrtScr key.
-
-`scrot` in terminal
+`grim` capabilities
 
 ## Cleaning up
 
