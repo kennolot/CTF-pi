@@ -7,10 +7,19 @@
 # Also create random pass with new run and delete the old ctf user.
 
 
-username = "weakaccount1"
-password = ("pi" "12345" "qwerty" "password" "pass" "admin")
+username="weakaccount1"
+password[0]="pi"
+password[1]="12345"
+password[2]="qwerty"
+password[3]="password"
+password[4]="pass"
+password[5]="admin"
 
-randvar = "${password[RANDOM % ${#password[@]}]}"
+# randomization source: https://stackoverflow.com/questions/35623462/bash-select-random-string-from-list
+size=${#password[@]}
+index=$(($RANDOM % $size))
+
+randvar=${password[$index]}
 
 if id "$username" &>/dev/null; then    
     sudo deluser --remove-home "$username"
@@ -18,7 +27,7 @@ fi
 
 sudo useradd -ms /bin/bash "$username"
 
-echo "$username:$password" | sudo chpasswd
+echo "$username:$randvar" | sudo chpasswd
 
 sudo cp ./answers/flag.txt "/home/$username/flag.txt"
 
