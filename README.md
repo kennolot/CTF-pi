@@ -4,7 +4,7 @@
 
 **Contains manuals and containers to turn your Raspberry Pi into a CTF box. WARNING: THIS WILL MAKE YOUR RASPBERRY PI INSECURE!!!**
 
-**Please make a backup and do these challenges on clean device**
+**Please make a backup, save it somewhere else, and do these challenges on clean device**
 
 CTF-pi focuses on teaching users IoT device security by turning their own Raspberry Pi into a vulnerable device.
 The goal is to show common misconfigurations and the effects it has on the security.
