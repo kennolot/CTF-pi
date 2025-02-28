@@ -3,7 +3,7 @@
 ### !!!
 ### Still it is great to analyze the security flaws.
 
-from flask import Flask, jsonify
+from flask import Flask
 import random
 
 app = Flask(__name__)
@@ -14,10 +14,18 @@ app.config["DEBUG"] = True
 @app.route("/")
 def index():
     numbers = random.sample(range(1, 101), 10)
-    return jsonify({
-        "message": "DEV message: debug mode active",
-        "very important sensor reading": numbers
-    })
+    return f'''
+    <!doctype html>
+    <html>
+    <head>        
+    </head>
+    <body>  
+        <p>message: DEV message: debug mode active,</p>
+        <p>very important sensor reading: {numbers}</p>
+    </body>
+    </html>
+    '''
+    
 
 
 @app.route("/debug")
@@ -35,11 +43,17 @@ def debug():
     with open("flag.txt", "r") as f:
         flag = f.read().strip()
 
-    return jsonify({
-        "debug_mode": True,
-        "debug_msg": debug_msg,
-        "flag": flag        
-    })
-
+    return f'''
+    <!doctype html>
+    <html>
+    <head>
+    </head>
+    <body>  
+        <p>debug_mode: True</p>
+        <p>debug_msg: {debug_msg}</p>
+        <p>flag: {flag}</p>
+    </body>
+    </html>
+    '''
 
 app.run(host="0.0.0.0", port=8080, debug=True)
