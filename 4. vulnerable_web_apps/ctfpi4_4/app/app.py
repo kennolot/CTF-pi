@@ -22,8 +22,8 @@ def index():
         <title>Personal Raspi file hosting server</title>
     </head>
     <body>
-    <!-- user uploads go to /uploads -->
-    <!-- implement the admin directory auth later -->
+    <!-- fixed the previous /admin now it should not be so obvious -->
+    <!-- i made it hard to guess this time so hackers cant find it!! -->
         <h1>File Upload</h1>
         <form method="POST" action="" enctype="multipart/form-data">
         <p><input type="file" name="file"></p>
@@ -34,8 +34,8 @@ def index():
 
     '''
 
-@app.route('/admin')
-def admin_uploads():
+@app.route('/whatsnew')
+def hidden_uploads():
     with open('flag.txt', 'r') as f:
         read = f.read().strip()
     return read

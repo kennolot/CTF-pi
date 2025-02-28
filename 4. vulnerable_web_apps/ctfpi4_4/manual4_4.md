@@ -1,10 +1,8 @@
-## Weak file hosting 1
+## Weak file hosting 2
 
 ### Scenario
 
-One of more common Raspberry Pi projects is a file server, your own "cloud" solution where you can upload files. This is also a good place for bad actors to breach and get access to your files.
-
-This particular application hosts your files locally, so anyone using the same network as the Pi can access the uploaded files.
+The web app code got updated, trying /admin directory doesn't work anymore, so the app isn't vulnerable any more right?
 
 ### Prerequisites
 
@@ -33,5 +31,7 @@ Find the flag hidden in the file hosting web app.
 
 View the website's source code, there's a clue hidden there.
 
-The hidden flag directory is guessable, but tools like `gobuster` `dirbuster` etc can be used aswell.
+The hidden flag directory can be found using tools like: `gobuster` `dirbuster` etc.
+
+It is not easily guessable and the tool might take some time to find the hidden dir.
 
