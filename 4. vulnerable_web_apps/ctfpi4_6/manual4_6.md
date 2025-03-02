@@ -4,7 +4,7 @@
 
 The previous web app developer was notified and is currently fixing their app issues. 
 
-His friend however copied his code and made a few changes, take a peek at `app/app.py` and see what has changed with `ctfpi4_5/app/app.py`.
+His friend however copied his code and made a few changes, take a peek at `app/app.py` and see what has changed from `ctfpi4_5/app/app.py`.
 
 ### Prerequisites
 
@@ -37,4 +37,4 @@ Upload a file named `pwd` for example, in linux terminal this would print the cu
 
 `;` escapes the command.
 
-Path traversal to find the flag.
+Answer: `/uploads/test.txt;cd hidden && cd admin && cat flag.txt`
