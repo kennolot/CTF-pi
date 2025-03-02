@@ -1,4 +1,4 @@
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_file
 import os
 app = Flask(__name__)
 
@@ -60,6 +60,11 @@ def uploads():
 
 @app.route('/uploads/<filename>')
 def download_file(filename):    
-    return send_from_directory('uploads', filename)
+    if ".py" in filename:
+        # i wanted to upload my python scripts without relaunching my app
+        # i hope its safe
+        output = os.popen(f"python {filename}").read()
+        return f"Python script detected, running: {output}"
+    return send_file(f"uploads/{filename}")
 
 app.run(host='0.0.0.0', port=8080, debug=True)

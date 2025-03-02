@@ -2,7 +2,11 @@
 
 ### Scenario
 
+The hidden directories have now been fixed, let's try for one last time if the website is truly safe this time.
 
+You might have noticed that all the app doesn't really restrict any uploads, we can upload anything we want. Is there a way to exploit that?
+
+There is a source code provided `app/app.py` check it out.
 
 ### Prerequisites
 
@@ -17,8 +21,6 @@ Be inside the current directory.
 `hostname -I` and go to http://<ip-address>:8080 from Pi remote connection
 or a machine that's connected to the same local network where Pi hosts the webapp
 
-`app.py` is NOT meant to be viewed for solving this challenge
-
 Find the flag hidden in the file hosting web app.
 
 
@@ -29,7 +31,5 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
-View the website's source code
 
-View more developer tools like console, maybe something pops out.
 
