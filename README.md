@@ -27,6 +27,22 @@ For some challenges you will see a folder called 'answers', within is a flag.txt
 
 The shell scripts and Dockerfile + docker-compose.yml are only for building the tasks unless specified otherwise. They might spoil the challenge so be aware of that when looking at them. It is always a good practice to review unknown code.
 
+## Before starting - do this only for the first time
+1. `python3 -m venv /opt/ctfenv` Create a global virtual environment, fixes Docker warning.
+2. Add to /etc/profile or /etc/bash.bashrc at the very end: 
+```
+if [ -d "/opt/ctfenv" ]; then
+    source /opt/ctfenv/bin/activate
+fi
+```
+This checks if directory /opt/ctfenv exists and if it does: activate the virtual environment.
+bashrc or equivalent is what runs when you log in.
+
+When 2. is not done, then the user can just manually start the virtual environment by running:
+`source /opt/ctfenv/bin/activate`
+
+When everything went as planned, there should be (ctfenv) before your username@hostname.
+
 ## How to run CTF-pi
 
 1. Clone the repository onto your Raspberry Pi
