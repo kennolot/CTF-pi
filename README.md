@@ -38,8 +38,8 @@ fi
 This checks if directory /opt/ctfenv exists and if it does: activate the virtual environment.
 bashrc or equivalent is what runs when you log in.
 
-When 2. is not done, then the user can just manually start the virtual environment by running:
-`source /opt/ctfenv/bin/activate`
+Note:  When 2. is not done, then the user can just manually start the virtual environment by running:
+`source /opt/ctfenv/bin/activate` but this is not automatic and this command has to be entered every new boot up.
 
 When everything went as planned, there should be (ctfenv) before your username@hostname.
 
