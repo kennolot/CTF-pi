@@ -31,5 +31,9 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
+Using `subprocess` `ospopen` `os.system` .. in context like this is very very dangerous.
 
+From the source `app.py` it seems that .py files are accepted, we should upload our own and see!
+
+There's a very basic `exploit_example.py` provided, however in real world any python code could be executed, including ransomware, spyware..
 

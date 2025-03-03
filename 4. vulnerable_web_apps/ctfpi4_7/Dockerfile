@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY app/app.py .
 
-COPY answers/flag.txt flag.txt
+RUN mkdir adminfolder_local
 
-RUN chmod 400 flag.txt
+COPY answers/flag.txt adminfolder_local/flag.txt
+
+RUN chmod 400 adminfolder_local/flag.txt
 
 RUN pip install flask
 

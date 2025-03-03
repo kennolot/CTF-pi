@@ -1,5 +1,6 @@
 from flask import Flask, request, send_file
 import os
+import subprocess
 app = Flask(__name__)
 
 os.makedirs('uploads', exist_ok=True)
@@ -60,10 +61,10 @@ def uploads():
 
 @app.route('/uploads/<filename>')
 def download_file(filename):    
-    if ".py" in filename:
+    if ".py" in filename and ".." not in filename and "/" not in filename:
         # i wanted to upload my python scripts without relaunching my app
-        # i hope its safe
-        output = os.popen(f"python {filename}").read()
+        # i hope its safe                
+        output = subprocess.run(['python3', f"uploads/{filename}"], capture_output=True, text=True)
         return f"Python script detected, running: {output}"
     return send_file(f"uploads/{filename}")
 
