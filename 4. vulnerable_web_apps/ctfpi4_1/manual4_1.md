@@ -16,11 +16,11 @@ Raspi connected to your router via wireless or cable
 
 While inside the current directory run from the console to start the webapp
 
-`docker-compose up --build -d`
+`docker compose up --build -d`
 
 ### Cleaning up
 
-When done with the tasks run `docker-compose down` to remove the containers and other ctf files
+When done with the tasks run `docker compose down` to remove the containers and other ctf files
 
 ### **Hints**
 

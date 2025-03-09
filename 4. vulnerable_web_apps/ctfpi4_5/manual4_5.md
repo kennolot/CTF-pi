@@ -12,7 +12,7 @@ Seems like the person patching the security issues is fed up, let's see if the f
 
 Be inside the current directory.
 
-`docker-compose up --build -d`
+`docker compose up --build -d`
 
 `hostname -I` and go to http://<ip-address>:8080 from Pi remote connection
 or a machine that's connected to the same local network where Pi hosts the webapp
@@ -24,7 +24,7 @@ Find the flag hidden in the file hosting web app.
 
 ### Cleaning up
 
-`docker-compose down`
+`docker compose down`
 
 
 ### **Hints**

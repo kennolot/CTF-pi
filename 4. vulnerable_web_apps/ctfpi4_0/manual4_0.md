@@ -15,7 +15,7 @@ Have cloned this repository and are inside the `ctfpi4_0` directory
 
 ### Requirements
 
-Run `docker-compose up --build -d`
+Run `docker compose up --build -d`
 
 `hostname -I` and enter one of the IPs there along with the port into your browser on your main machine.
 
@@ -25,7 +25,7 @@ Complete it inside your Raspi using VNC, raspi connect, etc.
 
 ### Cleaning up
 
-When done with the tasks run `docker-compose down` to remove the containers and other ctf files
+When done with the tasks run `docker compose down` to remove the containers and other ctf files
 
 ### Steps to complete
 

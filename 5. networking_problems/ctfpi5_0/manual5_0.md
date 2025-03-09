@@ -20,12 +20,12 @@ Install wireshark onto your laptop/PC
 
 While inside the current directory and on Pi run from the console:
 
-`docker-compose up --build -d`
+`docker compose up --build -d`
 
 
 ### Cleaning up
 
-When done with the tasks run `docker-compose down` to remove the containers and other ctf files
+When done with the tasks run `docker compose down` to remove the containers and other ctf files
 
 ### **Hints**
 

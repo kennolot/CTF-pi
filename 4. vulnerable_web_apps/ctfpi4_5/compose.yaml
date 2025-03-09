@@ -1,6 +1,5 @@
-version: "3.8"
 services:
-  fileserver4:
+  fileserver3:
     build: .
     ports:
       - "8080:8080"

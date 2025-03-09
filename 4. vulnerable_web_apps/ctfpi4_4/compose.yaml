@@ -1,6 +1,5 @@
-version: "3.8"
 services:
-  flask1:
+  fileserver2:
     build: .
     ports:
       - "8080:8080"

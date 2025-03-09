@@ -1,7 +1,5 @@
 ## Vulnerable flask webapp - 2
 
-** Please make sure you have a backup, this challenge can be potentially destructive with user error **
-
 ### Scenario 
 
 You found the debug message, and you have been given the source code for the web `app.py` (in this repository), read over the source code and see if you can find something weak to get further access to the system.
@@ -16,11 +14,11 @@ Raspi connected to your router via wireless or cable
 
 While inside the current directory run from the console to start the webapp
 
-`docker-compose up --build -d`
+`docker compose up --build -d`
 
 ### Cleaning up
 
-When done with the tasks run `docker-compose down` to remove the containers and other ctf files
+When done with the tasks run `docker compose down` to remove the containers and other ctf files
 
 ### **Hints**
 
