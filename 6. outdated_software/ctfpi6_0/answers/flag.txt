@@ -1,0 +1,2 @@
+If you see your image injected into the app, then congrats,
+you have completed the challenge.

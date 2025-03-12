@@ -1,0 +1,10 @@
+services:
+  grafana:
+    image: grafana/grafana-arm64v8-linux:6.2.4
+    container_name: grafana6.2.4
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=ctfpi
+      - GF_SECURITY_ADMIN_PASSWORD=ctfpi
+    restart: unless-stopped
