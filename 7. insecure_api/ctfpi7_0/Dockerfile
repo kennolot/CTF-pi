@@ -1,9 +1,12 @@
-FROM python:3.13-slim
+FROM homeassistant/home-assistant:2023.1.0@sha256:13a84cb3cb0eaf66694f37e643706c4e23818f92beaeb08f0a9d587db63eb659
 
-WORKDIR /app
+COPY answers/flag.txt /tmp/flag.txt
 
-COPY ./app/app.py .
 
-EXPOSE 1337
+EXPOSE 8123
 
-CMD ["python", "app.py"]
+RUN adduser -D -s /bin/bash myuser
+
+USER myuser
+
+CMD ["python", "-m", "homeassistant"]

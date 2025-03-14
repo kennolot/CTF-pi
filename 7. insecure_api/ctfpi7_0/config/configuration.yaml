@@ -1,0 +1,9 @@
+automation:
+  - alias: Unsafe Webhook
+    trigger:
+      - platform: webhook
+        webhook_id: insecure_hook
+    action:
+      - service: persistent_notification.create
+        data:
+          message: "FLAG{webhook_pwned}"

@@ -1,0 +1,11 @@
+services:
+  homeassistant1:
+    build: .
+    container_name: homeassistant1
+    volumes:
+      - ./config/configuration.yaml:/config/configuration.yaml
+    ports:
+      - "8123:8123"
+    restart: unless-stopped
+volumes:
+  config:
