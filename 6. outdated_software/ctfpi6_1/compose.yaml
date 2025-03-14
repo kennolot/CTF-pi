@@ -1,0 +1,10 @@
+services:
+  grafana2:    
+    build: .
+    container_name: grafana8.3.0    
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=ctfpi
+      - GF_SECURITY_ADMIN_PASSWORD=Gn$$_safdsb32_323
+    restart: unless-stopped
