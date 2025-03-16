@@ -1,9 +1,18 @@
+http:
+  server_port: 8123
+  cors_allowed_origins:
+    - "*"
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 0.0.0.0/0
+
 automation:
-  - alias: Unsafe Webhook
-    trigger:
-      - platform: webhook
-        webhook_id: insecure_hook
+  - trigger:
+      platform: webhook
+      webhook_id: "secretdata"
     action:
       - service: persistent_notification.create
         data:
-          message: "FLAG{webhook_pwned}"
+          title: "Webhook Triggered"
+          message: "The webhook was accessed!"
+

@@ -7,6 +7,8 @@ EXPOSE 8123
 
 RUN adduser -D -s /bin/bash myuser
 
-USER myuser
+WORKDIR /config
 
-CMD ["python", "-m", "homeassistant"]
+COPY config/configuration.yaml /config/configuration.yaml
+
+CMD ["python", "-m", "homeassistant", "--config", "/config"]
