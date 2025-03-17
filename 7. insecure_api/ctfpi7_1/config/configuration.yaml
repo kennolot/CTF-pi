@@ -1,4 +1,0 @@
-rest_command:
-  ssrftest:
-    url: "{{ trigger.json.url }}"
-    method: GET
