@@ -3,6 +3,4 @@ services:
     container_name: homeassistant2
     image: "ghcr.io/home-assistant/home-assistant:stable"
     restart: unless-stopped
-    ports:
-      - "8123:8123"
     network_mode: host
