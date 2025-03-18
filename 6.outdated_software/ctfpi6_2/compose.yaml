@@ -1,0 +1,6 @@
+services:
+  homeassistant0:
+    container_name: homeassistant0
+    image: "homeassistant/home-assistant:2023.8.0"
+    restart: unless-stopped
+    network_mode: host
