@@ -1,0 +1,4 @@
+services:
+  compose1:
+    container_name: compose1
+    build: .
