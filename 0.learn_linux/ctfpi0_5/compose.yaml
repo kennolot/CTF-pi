@@ -1,0 +1,19 @@
+services:
+  sender:
+    container_name: sender
+    build:
+      context: ./
+      dockerfile: ./sender/Dockerfile
+    volumes:
+      - flag:/app
+
+  receiver:
+    container_name: receiver
+    build:
+      context: ./
+      dockerfile: ./receiver/Dockerfile
+    volumes:
+      - flag:/app
+
+volumes:
+  flag:
