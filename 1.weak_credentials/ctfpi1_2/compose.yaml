@@ -1,0 +1,5 @@
+services:
+  weakcred3:
+    build: .
+    ports:
+      - "8080:8080"
