@@ -1,4 +1,4 @@
-### CTFPI Docker compose 2
+### CTFPI Docker compose 3 - Race condition
 
 ## Scenario
 

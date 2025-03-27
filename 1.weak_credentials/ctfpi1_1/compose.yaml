@@ -1,0 +1,11 @@
+services:
+  weakcred1:
+    container_name: weakcred1
+    image: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./answers/flag.txt:/answers/flag.txt
+      - ./init.sh:/init.sh
+    entrypoint: ["/bin/bash", "/init.sh"]
