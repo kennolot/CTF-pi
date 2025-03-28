@@ -1,13 +1,13 @@
 services:
-  sender:
-    container_name: sender
+  sender2:
+    container_name: sender2
     build: ./sender
     volumes:
       - ./answers:/app/answers
     command: ["python", "/app/send_flag.py"]
 
-  receiver:
-    container_name: receiver
+  receiver2:
+    container_name: receiver2
     build: ./receiver
     volumes:
       - ./answers:/app/answers
