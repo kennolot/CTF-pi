@@ -1,37 +1,41 @@
 import random
 import string
 
-secret_segments = 10 # for example CTFPI{flag} would be divided ACA, ATA, AFA, APA, AIA, A{A, AfA ...
-total_length = 1000 # characters
-
 # read the answer from answers/flag.txt
 with open("answers/flag.txt", "r") as flag:
     answer = flag.read().strip()
 
+secret_segments = len(answer)
+total_length = 1000 # characters total
 
-def generate_secret(index):
+# for example CTFPI{flag} would be divided ACA, ATA, AFA, APA, AIA, A{A, AfA ...
+
+def generate_secret(index, answer):
     segment = answer[index]
 
-    return fA{segment}A
+    return f"A{segment}A"
 
-def generate_random_text(total_length, secret_segments):
+def generate_random_text(total_length, secret_segments, answer):
     # we don't want 'A' as the random letter since it marks the secret
     letters = string.ascii_uppercase.replace('A', '') + string.ascii_lowercase
     index = 0
     random_text = []
+    pos = 0
+    secret_indices = sorted(random.sample(range(total_length), secret_segments))
 
-    while True:
-        secret_chance = random.randint(0, 100)
-        if secret_chance < 5: # 5 % chance to generate the secret at every character.
-            segment = generate_secret(index)
-            random_text.append(segment)
+    while pos < total_length:
+        if index < secret_segments and pos == secret_indices[index]:
+            random_text.append(generate_secret(index, answer))
             index += 1
-        else:        
-            random_char = random.choice(letters)
-            random_text.append(random_char)
+        else:
+            random_text.append(random.choice(letters))
+        pos += 1
+    return "".join(random_text)
 
-random_text = generate_random_text(total_length, secret_segments)
+random_text = generate_random_text(total_length, secret_segments, answer)
+
 
 with open("code.txt", "w") as f:
     f.write(random_text)
 
+print("Randomly generated secret saved to code.txt")
