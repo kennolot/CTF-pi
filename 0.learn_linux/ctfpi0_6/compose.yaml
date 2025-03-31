@@ -1,17 +1,19 @@
 services:
-  sender2:
-    container_name: sender2
-    build: ./sender
-    volumes:
-      - ./answers:/app/answers
-    command: ["python", "/app/send_flag.py"]
-
-  receiver2:
-    container_name: receiver2
-    build: ./receiver
+  incrementer1:
+    container_name: incrementer1
+    build: ./incrementer_1
     volumes:
       - ./answers:/app/answers
     environment:
       - PYTHONUNBUFFERED=1
-    command: ["python", "/app/receive_flag.py"]
+    command: ["python", "/app/increment_1.py"]
+
+  incrementer2:
+    container_name: incrementer2
+    build: ./incrementer_2
+    volumes:
+      - ./answers:/app/answers
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "/app/increment_2.py"]
 

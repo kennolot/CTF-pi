@@ -1,5 +1,7 @@
 ### CTFPI docker compose 3 - Race condition
 
+### THIS CHALLENGE IS BROKEN SO IT CANT BE RUN
+
 ## Scenario
 
 In computing there's a phenomenon as race condition. They might not be easy to debug or even notice and there have been instances where a software flaw such has this was left unnoticed on a radiation therapy machine, and sadly led to loss of human lives. Another example was with GE Energy when their alarm subsystem had a race condition, making the alarming system to monitoring technicians unfunctional. This led to a blackout in 2003. https://en.wikipedia.org/wiki/Race_condition.
