@@ -7,7 +7,7 @@ import time
 # pin numbers marked with GPIOx, the x is the number of the pin (BCM), for example GPIO4 would be 4.
 # check the pinout for your model check if they match before running the code.
 # The green pins here should be good to use: https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg
-buttons = [4, 17, 27, 22, 5, 6, 13, 26]
+buttons = [4, 17, 27, 22, 5, 6]
 buttons = {pin: Button(pin, pull_up=True) for pin in buttons}
 # list where we remember "digits"
 entered_digits = []
@@ -26,8 +26,8 @@ def pressed(pin):
         entered_digits.append(pin)
         print(f"Detected pin {pin}, code entered so far: {entered_digits}")
 
-        # PIN code length is 4.
-        if len(entered_digits) >= 4:
+        # PIN code length is 3.
+        if len(entered_digits) >= 3:
             print(f"Full code entered: {entered_digits}")
             print("**Beep, Beep**")
 
@@ -41,7 +41,7 @@ def pressed(pin):
 
             # reset entered code finally
             entered_digits = []
-            time.sleep(1)
+            #time.sleep(1)
 
 for pin, button in buttons.items():
     button.when_pressed = lambda b=pin: pressed(b)
