@@ -11,7 +11,7 @@ Let's see if we can read what's being transmitted.
 
 ## Prerequisites
 
-Have a microcontroller like raspberry pico or arduino etc. A way to read GPIO pins.
+Have a microcontroller like raspberry pico or arduino etc. A way to read UART pins.
 
 Raspberry Pi.
 
@@ -52,6 +52,14 @@ On pinout these are generally marked as UARTx, 'x' being a number.
 For this challenge both Rx and Tx aren't necessary, since we only want to see what Pi is sending out. AKA Pi's Tx should connect to Pico's Rx and that's it.
 
 We need a ground wire too, connect GND from Raspberry Pi to GND on Raspberry Pi Pico.
+
+Make sure the USB is connected between your pico and main computer(Windows etc).
+
+The end result should look something like this: (ignore the bottom GREEN, BLACK, BLUE as they're for debug and not needed for us)
+
+![Alt text](https://cdn.xingosoftware.com/elektor/images/fetch/dpr_1,w_625,h_736,c_fit/https%3A%2F%2Fwww.elektormagazine.com%2Fassets%2Fupload%2Fimg%2Fpublic%2Foriginal%2F210045-013-94-original-figure-13.jpg "Connections")
+
+(Credits to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf for the image)
 
 Now everything needed should be done, run `send_flag.py` on Raspberry Pi.
 
