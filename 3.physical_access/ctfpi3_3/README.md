@@ -1,32 +1,80 @@
-### Physical Access - Exploiting open USB ports with our own BadUSB. 3.
+### Physical Access - Reading from exposed UART pins.
 
 ## Scenario
 
-Now this challenge is a special one. You are the one now who creates the challenge.
+You've found a Raspberry Pi seemingly all by itself, you notice it has power and also has a few wires connecting it to another device.
 
-There are many even more advanced scripts online to test out. Try some out or get inspiration to write your own.
+It seems the connections correspond to UART, what could it mean?
 
-See how far you can exploit your Raspberry Pi which has open USB ports.
+Let's see if we can read what's being transmitted.
 
-After this challenge you should have a good understanding how dangerous exposed USB ports are when left in a remote environment.
 
 ## Prerequisites
 
-Have a Raspberry pico with pico-ducky available.
+Have a microcontroller like raspberry pico or arduino etc. A way to read UART pins.
 
-Cable or adapter for connection.
+Raspberry Pi.
 
-Your own Raspberry Pi ready to be exploited.
+Main computer.
+
+Jumper cables, typically F-F.
+
+USB cable.
 
 ## Requirements 
 
-!! MAKE SURE YOU UNDERSTAND WHAT THE SCRIPT DOES, DON'T BLINDLY RUN !!
+Make sure Raspberry Pi (NOT pico) has UART enabled. For that click on top-left on raspberry logo > Preferences > Raspberry Pi Configuration > Interfaces > Enable Serial Port and disable Serial Console. Remember what was there before so we can change these back afterwards. Reboot.
 
-This site contains 14 pages of payloads or even scripts that protect your device(yes, the BadUSB doesn't have to be BAD)
+On raspberry Pi run
+```
+pip install pyserial
+```
 
-https://payloadhub.com/blogs/payloads/tagged/usb-rubber-ducky
+Install Thonny onto your main machine(Windows etc): https://thonny.org/
+
+Raspberry Pi Pico:
+
+We will be installing micropython on it, so everything currently on pico probably gets wiped and replaced.
+
+https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/3
+
+Complete what's said on this page, also at the bottom click Continue, and try if LED blink works. If there's an error about package not existing then: https://projects.raspberrypi.org/en/projects/introduction-to-the-pico/4
+
+
+After everything mentioned above is working and verified, you may connect the wires.
+
+https://timhanewich.medium.com/using-uart-between-a-raspberry-pi-pico-and-raspberry-pi-3b-raspbian-71095d1b259f
+
+Find the correct pinouts on Raspberry Pi and Raspberry Pi Pico for UART, REMEMBER: Rx and Tx should cross, meaning Pico's Tx goes to Pi's Rx, and Pi's Tx goes to Pico's Rx.
+
+On pinout these are generally marked as UARTx, 'x' being a number.
+
+For this challenge both Rx and Tx aren't necessary, since we only want to see what Pi is sending out. AKA Pi's Tx should connect to Pico's Rx and that's it.
+
+We need a ground wire too, connect GND from Raspberry Pi to GND on Raspberry Pi Pico.
+
+Make sure the USB is connected between your pico and main computer(Windows etc).
+
+The end result should look something like this: (ignore the bottom GREEN, BLACK, BLUE as they're for debug and not needed for us)
+
+![Alt text](https://cdn.xingosoftware.com/elektor/images/fetch/dpr_1,w_625,h_736,c_fit/https%3A%2F%2Fwww.elektormagazine.com%2Fassets%2Fupload%2Fimg%2Fpublic%2Foriginal%2F210045-013-94-original-figure-13.jpg "Connections")
+
+(Credits to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf for the image)
+
+Now everything needed should be done, run `send_flag.py` on Raspberry Pi.
+
+
+## Steps to solve
+
+Onto the actual challenge, for Pico write a code `read_flag.py`  that reads UART data and prints it. We shall uncover the secrets sent to us by Raspberry Pi.
+
+Check the source code from `send_flag.py` and try to read the flag.
+
+Check the comment, if you get port errors or don't receive anything at all you may need to change serial port to your own.
+
+If you get stuck there's a solution file in `answers/`
 
 
 ## Cleaning up
 
-Go through the source code of the script you find, make sure what it does and delete remains if there are any.
+Revert the settings if needed. Disable Serial Port, enable Serial Console, or however it was before.

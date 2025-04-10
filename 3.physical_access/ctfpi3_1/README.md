@@ -1,52 +1,31 @@
-## Physical Access - Exploiting open USB ports with our own BadUSB.
+### Physical Access - Exploiting open USB ports with our own BadUSB. 2.
 
+## Scenario
 
-### Scenario
+Now let's take a more privacy related approach, after completing the first challenge we know we can run pretty much any commands we want via BadUSB. 
 
-This time we've found an otherwise inaccessible Raspberry device running in an IoT environment. It was hidden from plain sight and there doesn't seem to be a lot of ways to breach it's security. However we see that the USB ports of the raspi are completely exposed.
+However for this challenge let's try something littler "quieter". Let's try taking a screenshot from the Raspberry's screen!
 
-We have overheard someone and know that the `flag.txt` is inside the pi home directory.
+NOTE!
 
-In this scenario we are building our own BadUSB, a device when plugged into another device(Raspberry Pi in our case) delivers malware, executes malicious commands etc. By the end of this we will see that even a device that is completely offline or otherwise unreachable is still possible to exploit with exposed USB ports.
+For this challenge there is no flag.txt, the challenge is completed when you have a screenshot taken from raspi on your main PC.
 
-### Prerequisites
+## Prerequisites
 
-1x **Raspberry Pico** or equivalent like Arduino etc.
+Have a pico-ducky that we made in the previous challenge working.
 
-1x A data transmitting USB A -> Micro USB(Typically) cable or an adapter.
+Raspberry Pi ready to be hacked.
 
-1x Raspberry Pi as the victim device.
+## Requirements 
 
-### Requirements
+Find a way to take a screenshot using duckyscript.
 
-For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Austin's Lab)
+Plug in pico-usb into the raspi and retrieve the screenshot.
 
-When using Raspberry Pico, we need to download https://github.com/dbisu/pico-ducky and follow the instructions provided on this page.
+## **Hints**
 
-Run the following commands on Raspberry Pi when inside the directory that contains this manual `cp answers/flag.txt ~`
+`grim` capabilities
 
+## Cleaning up
 
-### Steps to complete
-
-After setting up the BadUSB device, we are now ready to write our own simple payload.
-
-Open up a text editor(even Notepad is fine) and name it `payload.dd`.
-
-Into the `payload.dd` we can start writing our malicious script.
-I have provided an example in this directory of a working solution, but you are free to experiment on your own
-
-After the payload is written simply make sure the BadUSB is NOT in setup mode and plug it into the USB port of Raspberry Pi, your script should execute on its own.
-
-Docs page for bunch of useful Duckyscript commands: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
-
-Valid solutions could also utilise netcat(`nc`), using `scp` or writing the flag.txt onto the BadUSB storage.
-
-When using the example provided we can see it uses python http.server to display the flag.txt on our local network server.
-To view the address the server is at we run `hostname -I` from the Raspberry Pi remote connection ex. 10.10.10.24 so it's at http://10.10.10.24:8000.
-We can simply visit local address we have and flag.txt file should be hosted there, containing our answer.
-
-
-### Cleaning up
-
-When you are done just delete the flag from the home directory of raspi:
-`rm ~/flag.txt` 
+If your script saved the screenshot onto the pico, you might want to delete the image since pico has very limited space.

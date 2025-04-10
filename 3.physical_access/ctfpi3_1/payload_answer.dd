@@ -1,5 +1,5 @@
 REM This is a functional code and shows one of many ways to solve
-REM challenge 3_2
+REM challenge 3_1
 REM If you want to use this then you have to rename it to `payload.dd`
 
 DELAY 1000

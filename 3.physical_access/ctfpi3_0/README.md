@@ -1,80 +1,52 @@
-### Physical Access - Reading from exposed UART pins.
-
-## Scenario
-
-You've found a Raspberry Pi seemingly all by itself, you notice it has power and also has a few wires connecting it to another device.
-
-It seems the connections correspond to UART, what could it mean?
-
-Let's see if we can read what's being transmitted.
+## Physical Access - Exploiting open USB ports with our own BadUSB.
 
 
-## Prerequisites
+### Scenario
 
-Have a microcontroller like raspberry pico or arduino etc. A way to read UART pins.
+This time we've found an otherwise inaccessible Raspberry device running in an IoT environment. It was hidden from plain sight and there doesn't seem to be a lot of ways to breach it's security. However we see that the USB ports of the raspi are completely exposed.
 
-Raspberry Pi.
+We have overheard someone and know that the `flag.txt` is inside the pi home directory.
 
-Main computer.
+In this scenario we are building our own BadUSB, a device when plugged into another device(Raspberry Pi in our case) delivers malware, executes malicious commands etc. By the end of this we will see that even a device that is completely offline or otherwise unreachable is still possible to exploit with exposed USB ports.
 
-Jumper cables, typically F-F.
+### Prerequisites
 
-USB cable.
+1x **Raspberry Pico** or equivalent like Arduino etc.
 
-## Requirements 
+1x A data transmitting USB A -> Micro USB(Typically) cable or an adapter.
 
-Make sure Raspberry Pi (NOT pico) has UART enabled. For that click on top-left on raspberry logo > Preferences > Raspberry Pi Configuration > Interfaces > Enable Serial Port and disable Serial Console. Remember what was there before so we can change these back afterwards. Reboot.
+1x Raspberry Pi as the victim device.
 
-On raspberry Pi run
-```
-pip install pyserial
-```
+### Requirements
 
-Install Thonny onto your main machine(Windows etc): https://thonny.org/
+For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Austin's Lab)
 
-Raspberry Pi Pico:
+When using Raspberry Pico, we need to download https://github.com/dbisu/pico-ducky and follow the instructions provided on this page.
 
-We will be installing micropython on it, so everything currently on pico probably gets wiped and replaced.
-
-https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/3
-
-Complete what's said on this page, also at the bottom click Continue, and try if LED blink works. If there's an error about package not existing then: https://projects.raspberrypi.org/en/projects/introduction-to-the-pico/4
+Run the following commands on Raspberry Pi when inside the directory that contains this manual `cp answers/flag.txt ~`
 
 
-After everything mentioned above is working and verified, you may connect the wires.
+### Steps to complete
 
-https://timhanewich.medium.com/using-uart-between-a-raspberry-pi-pico-and-raspberry-pi-3b-raspbian-71095d1b259f
+After setting up the BadUSB device, we are now ready to write our own simple payload.
 
-Find the correct pinouts on Raspberry Pi and Raspberry Pi Pico for UART, REMEMBER: Rx and Tx should cross, meaning Pico's Tx goes to Pi's Rx, and Pi's Tx goes to Pico's Rx.
+Open up a text editor(even Notepad is fine) and name it `payload.dd`.
 
-On pinout these are generally marked as UARTx, 'x' being a number.
+Into the `payload.dd` we can start writing our malicious script.
+I have provided an example in this directory of a working solution, but you are free to experiment on your own
 
-For this challenge both Rx and Tx aren't necessary, since we only want to see what Pi is sending out. AKA Pi's Tx should connect to Pico's Rx and that's it.
+After the payload is written simply make sure the BadUSB is NOT in setup mode and plug it into the USB port of Raspberry Pi, your script should execute on its own.
 
-We need a ground wire too, connect GND from Raspberry Pi to GND on Raspberry Pi Pico.
+Docs page for bunch of useful Duckyscript commands: https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
 
-Make sure the USB is connected between your pico and main computer(Windows etc).
+Valid solutions could also utilise netcat(`nc`), using `scp` or writing the flag.txt onto the BadUSB storage.
 
-The end result should look something like this: (ignore the bottom GREEN, BLACK, BLUE as they're for debug and not needed for us)
-
-![Alt text](https://cdn.xingosoftware.com/elektor/images/fetch/dpr_1,w_625,h_736,c_fit/https%3A%2F%2Fwww.elektormagazine.com%2Fassets%2Fupload%2Fimg%2Fpublic%2Foriginal%2F210045-013-94-original-figure-13.jpg "Connections")
-
-(Credits to https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf for the image)
-
-Now everything needed should be done, run `send_flag.py` on Raspberry Pi.
+When using the example provided we can see it uses python http.server to display the flag.txt on our local network server.
+To view the address the server is at we run `hostname -I` from the Raspberry Pi remote connection ex. 10.10.10.24 so it's at http://10.10.10.24:8000.
+We can simply visit local address we have and flag.txt file should be hosted there, containing our answer.
 
 
-## Steps to solve
+### Cleaning up
 
-Onto the actual challenge, for Pico write a code `read_flag.py`  that reads UART data and prints it. We shall uncover the secrets sent to us by Raspberry Pi.
-
-Check the source code from `send_flag.py` and try to read the flag.
-
-Check the comment, if you get port errors or don't receive anything at all you may need to change serial port to your own.
-
-If you get stuck there's a solution file in `answers/`
-
-
-## Cleaning up
-
-Revert the settings if needed. Disable Serial Port, enable Serial Console, or however it was before.
+When you are done just delete the flag from the home directory of raspi:
+`rm ~/flag.txt` 

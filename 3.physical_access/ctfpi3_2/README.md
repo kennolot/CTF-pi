@@ -1,31 +1,32 @@
-### Physical Access - Exploiting open USB ports with our own BadUSB. 2.
+### Physical Access - Exploiting open USB ports with our own BadUSB. 3.
 
 ## Scenario
 
-Now let's take a more privacy related approach, after completing the first challenge we know we can run pretty much any commands we want via BadUSB. 
+Now this challenge is a special one. You are the one now who creates the challenge.
 
-However for this challenge let's try something littler "quieter". Let's try taking a screenshot from the Raspberry's screen!
+There are many even more advanced scripts online to test out. Try some out or get inspiration to write your own.
 
-NOTE!
+See how far you can exploit your Raspberry Pi which has open USB ports.
 
-For this challenge there is no flag.txt, the challenge is completed when you have a screenshot taken from raspi on your main PC.
+After this challenge you should have a good understanding how dangerous exposed USB ports are when left in a remote environment.
 
 ## Prerequisites
 
-Have a pico-ducky that we made in the previous challenge working.
+Have a Raspberry pico with pico-ducky available.
 
-Raspberry Pi ready to be hacked.
+Cable or adapter for connection.
+
+Your own Raspberry Pi ready to be exploited.
 
 ## Requirements 
 
-Find a way to take a screenshot using duckyscript.
+!! MAKE SURE YOU UNDERSTAND WHAT THE SCRIPT DOES, DON'T BLINDLY RUN !!
 
-Plug in pico-usb into the raspi and retrieve the screenshot.
+This site contains 14 pages of payloads or even scripts that protect your device(yes, the BadUSB doesn't have to be BAD)
 
-## **Hints**
+https://payloadhub.com/blogs/payloads/tagged/usb-rubber-ducky
 
-`grim` capabilities
 
 ## Cleaning up
 
-If your script saved the screenshot onto the pico, you might want to delete the image since pico has very limited space.
+Go through the source code of the script you find, make sure what it does and delete remains if there are any.
