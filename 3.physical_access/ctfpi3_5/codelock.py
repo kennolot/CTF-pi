@@ -13,35 +13,39 @@ buttons = {pin: Button(pin, pull_up=True) for pin in buttons}
 entered_digits = []
 
 with open("answers/PIN.txt", "r") as PIN:
-	PIN = int(PIN.read().strip())
+	PIN = int(PIN.read())
 
 with open("answers/flag.txt", "r") as flag:
-	flag = flag.read().strip()
+	flag = flag.read()
+
+last_time = 0
+DEBOUNCE_TIME = 200 # milliseconds
 
 def pressed(pin):
-    global entered_digits
+    global entered_digits, last_time, DEBOUNCE_TIME
+    # debounce
+    current_time = time.time() * 1000
+    if (current_time - last_time) > DEBOUNCE_TIME:
 
-    # for debounce we only register the same digit once
-    if len(entered_digits) == 0 or entered_digits[-1] != pin:
         entered_digits.append(pin)
         print(f"Detected pin {pin}, code entered so far: {entered_digits}")
+        last_time = current_time
 
-        # PIN code length is 3.
-        if len(entered_digits) >= 3:
-            print(f"Full code entered: {entered_digits}")
-            print("**Beep, Beep**")
+    # PIN code length is 3.
+    if len(entered_digits) >= 3:
+        print(f"Full code entered: {entered_digits}")
+        print("**Beep, Beep**")
 
-            # check if entered PIN code is correct
-            entered_digits = int(''.join(map(str, entered_digits)))
-            if entered_digits == PIN:
-            	print("Door opens! Come on in!")
-            	print(flag)
-            else:
-            	print("INCORRECT PIN CODE!")
+        # check if entered PIN code is correct
+        entered_digits = int(''.join(map(str, entered_digits)))
+        if entered_digits == PIN:
+        	print("Door opens! Come on in!")
+        	print(flag)
+        else:
+        	print("INCORRECT PIN CODE!")
 
-            # reset entered code finally
-            entered_digits = []
-            #time.sleep(1)
+        # reset entered code finally
+        entered_digits = []        
 
 for pin, button in buttons.items():
     button.when_pressed = lambda b=pin: pressed(b)

@@ -1,5 +1,11 @@
 ### Physical Access - Messing with GPIO pins.
 
+**WARNING**
+
+Make sure you are absolutely certain that you have connected the proper pins between Pico and Pi(when you go with option 2).
+
+Ex: 5V into a 3.3V will damage your device. Also 3.3V output into a 0V output will also damage your device, if you are not certain find information online or don't practically do the task at all, reading the code provided will give a good idea aswell.
+
 ## Scenario
 
 I've built a simple codelock prototype, and one day I want to start selling it to the world.
