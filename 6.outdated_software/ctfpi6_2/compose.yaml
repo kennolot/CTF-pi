@@ -1,6 +1,8 @@
 services:
   homeassistant0:
     container_name: homeassistant0
-    image: "homeassistant/home-assistant:2023.8.0"
+    image: "homeassistant/home-assistant:2023.2.0@sha256:a4a9f614a1edcd414d63decd99813a2ff9910d876db1e04641540a0c75d20918"
     restart: unless-stopped
     network_mode: host
+    environment:
+      DISABLE_JEMALLOC: "true"
