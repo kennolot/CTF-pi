@@ -1,21 +1,21 @@
 import time
-import os
 
-internal_counter = 0
+# clear the file before anything
+open("/app/answers/counter.txt", "w").close()
 
 while True:
-	time.sleep(0.5)
-	internal_counter += 1
+	# comment this out after part 1
+	time.sleep(1)
 	# using volumes, the count gets written into a shared file
-	with open("/app/answers/counter.txt", "w+") as f:
-		print("Counter should be:", internal_counter)
-		counter = f.read().strip()
-		if not counter.isdigit():
-			f.write('0')
-		print("We are reading:", counter)
+	with open("/app/answers/counter.txt", "r+") as f:
 
-		#f.seek(0)
+		try:
+			counter = int(f.read().strip())		
+		except:
+			counter = 0
 
-		counter = int(counter) + 1
+		print("Reading from counter.txt:", counter)
+		counter += 1
+		f.seek(0)
 		f.write(str(counter))
-		#f.truncate()
+		f.truncate()
