@@ -1,8 +1,10 @@
 services:
   fluent-bit:
-    container_name: fluent-bit
+    container_name: fluent-bit-vulnerable
     image: "fluent/fluent-bit:3.0.2-arm64"
-    restart: unless-stopped
-    network_mode: host
-    environment:
-      FLB_JEMALLOC: "false"
+    ports:
+      - "2020:2020"
+      - "8888:8888"
+    volumes:
+      - ./config/config.conf:/fluent-bit/etc/fluent-bit.conf
+    command: ["/fluent-bit/bin/fluent-bit", "-c", "/fluent-bit/etc/fluent-bit.conf"]
