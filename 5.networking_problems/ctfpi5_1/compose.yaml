@@ -1,0 +1,26 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+
+  dummy_ssh:
+    image: linuxserver/openssh-server:arm64v8-latest
+    ports:
+      - "22:2222"
+    environment:
+      - PASSWORD_ACCESS=true
+      - USER_NAME=ctfpi
+      - USER_PASSWORD=ctfpi
+    volumes:
+      - ./ssh_config:/config
+
+  custom:
+    build: .
+    ports:
+      - "5322:80"
+
+  dummy_ftp:
+    image: delfer/alpine-ftp-server
+    ports:
+      - "21:21"
