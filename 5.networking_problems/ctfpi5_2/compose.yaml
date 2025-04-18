@@ -1,0 +1,13 @@
+services:
+  webapp:
+    container_name: login
+    build:
+      context: ./
+      dockerfile: ./webapp/Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - net
+networks:
+  net:
+    driver: bridge
