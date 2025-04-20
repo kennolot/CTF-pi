@@ -31,7 +31,9 @@ Find the hacker's C2C server.
 
 The hacker could have made some mistakes on their own, find the mistake.
 
-Either by hand(will be tedious) or modify the script `sidechannel.py` to try all lowercase character combinations, when it takes longer than usual to load, you might have inputted the correct character, keep appending to it and the loading times will become longer and longer.
+The password will have the flag format, `CTFPI{xyz}` the `CTFPI{` can be hardcoded into your program at the start, this is the start of the password, `xyz` is the part you will have to find yourself. 
+
+Either by hand(will be tedious) or modify the script `sidechannel.py` to try all lowercase character combinations (CTFPI{xyz}), when it takes longer than usual to load, you might have inputted the correct character, keep appending to it and the loading times will become longer and longer.
 
 The challenge is completed when you gain access to the hacker account.
 
