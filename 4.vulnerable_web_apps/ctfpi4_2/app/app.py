@@ -35,11 +35,14 @@ def debug():
         "debug_msg": debug_msg
     })
 
+# i introduced this to check if machines in our network can ping eachother.
 @app.route("/ping", methods=["GET"])
 def ping():
-    target = request.args.get("ip", "")      
+    target = request.args.get("ip", "")
+    #       
     response = os.popen(f"ping -c 1 {target}").read()
     print(f"Response: {response}")    
     return f"<pre>{response}</pre>"
 
-app.run(host="0.0.0.0", port=8080, debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=80, debug=True)

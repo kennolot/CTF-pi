@@ -63,5 +63,5 @@ def download_file(filename):
     # i made this so user can read directly inside the app instead of downloading
     output = os.popen(f'cat uploads/{filename}').read()
     return output
-
-app.run(host='0.0.0.0', port=8080, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80, debug=True)

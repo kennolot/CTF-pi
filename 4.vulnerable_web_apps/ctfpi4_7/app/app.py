@@ -68,4 +68,5 @@ def download_file(filename):
         return f"Python script detected, running: {output}"
     return send_file(f"uploads/{filename}")
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80, debug=True)

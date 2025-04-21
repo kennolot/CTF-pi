@@ -1,4 +1,4 @@
-## Weak file hosting 3
+## CTF-pi - Weak file hosting 3 - Difficulty: ★☆☆☆☆
 
 ### Scenario
 
@@ -6,16 +6,20 @@ Seems like the person patching the security issues is fed up, let's see if the f
 
 ### Prerequisites
 
-1x Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi4_4` directory.
+
+`docker compose` works.
 
 ### Requirements 
 
-Be inside the current directory.
+Run:
 
 `docker compose up --build -d`
 
-`hostname -I` and go to http://<ip-address>:8080 from Pi remote connection
-or a machine that's connected to the same local network where Pi hosts the webapp
+`hostname -I` and go to http://<ip-address> from Pi remote connection
+or a machine that's connected to the same local network where Pi hosts the webapp.
 
 `app.py` is NOT meant to be viewed for solving this challenge
 

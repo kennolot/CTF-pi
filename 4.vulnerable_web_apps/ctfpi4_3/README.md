@@ -1,4 +1,4 @@
-## Weak file hosting 1
+## CTF-pi - Weak file hosting 1 - Difficulty: ★☆☆☆☆
 
 ### Scenario
 
@@ -8,30 +8,36 @@ This particular application hosts your files locally, so anyone using the same n
 
 ### Prerequisites
 
-1x Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-### Requirements 
+Have cloned this `CTF-pi` repository and are inside the `ctfpi4_3` directory.
 
-Be inside the current directory.
+`docker compose` works.
+
+### Objective 
+
+Run:
 
 `docker compose up --build -d`
 
-`hostname -I` and go to http://<ip-address>:8080 from Pi remote connection
-or a machine that's connected to the same local network where Pi hosts the webapp
+`hostname -I` and go to http://<ip-address> from Pi remote connection
+or a machine that's connected to the same local network where Pi hosts the webapp.
 
 `app.py` is NOT meant to be viewed for solving this challenge
 
+View the website's source code, there's a clue hidden there.
+
 Find the flag hidden in the file hosting web app.
+
+### **Hints**
+
+The flag is hidden in a directory, other than /uploads or /.
+
+The hidden flag directory is guessable, but tools like `gobuster` `dirbuster` etc can be used aswell.
 
 
 ### Cleaning up
 
 `docker compose down`
 
-
-### **Hints**
-
-View the website's source code, there's a clue hidden there.
-
-The hidden flag directory is guessable, but tools like `gobuster` `dirbuster` etc can be used aswell.
 

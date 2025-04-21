@@ -10,6 +10,6 @@ RUN chmod 400 flag.txt
 
 RUN pip install flask
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["python", "app.py"]

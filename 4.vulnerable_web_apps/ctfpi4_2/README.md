@@ -1,4 +1,4 @@
-## Vulnerable flask webapp - 2
+## CTF-pi - Vulnerable flask webapp - 2 - Difficulty: ★★☆☆☆
 
 ### Scenario 
 
@@ -6,23 +6,24 @@ You found the debug message, and you have been given the source code for the web
 
 ### Prerequisites
 
-Raspberry Pi powered on. Preferably running Raspberry Pi OS
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Raspi connected to your router via wireless or cable
+Have cloned this `CTF-pi` repository and are inside the `ctfpi4_2` directory.
 
 ### Objective
 
-While inside the current directory run from the console to start the webapp
+While inside the current directory run from the terminal to start the webapp:
 
 `docker compose up --build -d`
 
-### Cleaning up
+Open up  `app/app.py` and read the source code.
 
-When done with the tasks run `docker compose down` to remove the containers and other ctf files
+Find the vulnerability and exploit it.
+
+Read the flag.txt.
 
 ### **Hints**
 
-Open up the app.py in this directory. There's an interesting comment left behind
 
 Can you figure out what os.popen does?
 
@@ -32,3 +33,6 @@ Since it's using terminal to ping, can we reach further than just ping command?
 
 `http://127.0.0.1:8080/ping?ip=127.0.0.1;ls` (notice the ls command), now we also see files on the system, meaning we have terminal access, can you find the flag?
 
+### Cleaning up
+
+When done with the tasks run `docker compose down` to remove the containers and other ctf files.

@@ -1,4 +1,4 @@
-## Weak file hosting 4
+## CTF-pi - Weak file hosting 4 - Difficulty: ★★☆☆☆
 
 ### Scenario
 
@@ -8,33 +8,37 @@ His friend however copied his code and made a few changes, take a peek at `app/a
 
 ### Prerequisites
 
-1x Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-### Requirements 
+Have cloned this `CTF-pi` repository and are inside the `ctfpi4_6` directory.
 
-Be inside the current directory.
+`docker compose` works.
+
+### Objective 
+
+Run on Raspberry Pi:
 
 `docker compose up --build -d`
 
-`hostname -I` and go to http://<ip-address>:8080 from Pi remote connection
-or a machine that's connected to the same local network where Pi hosts the webapp
+`hostname -I` and go to http://<ip-address> from Pi remote connection
+or a machine that's connected to the same local network where Pi hosts the webapp.
+
+Check out the `app/app.py` for source code.
 
 Find the flag hidden in the file hosting web app.
+
+### **Hints**
+
+
+Are user inputs sanitized?
+
+Upload a file named `test.txt` for example.
+
+`;` escapes the command.
+
+Answer: `/uploads/test.txt;cd hidden && cd admin && cat flag.txt`
 
 
 ### Cleaning up
 
 `docker compose down`
-
-
-### **Hints**
-
-Check out the `app/app.py` for source code.
-
-Are user inputs sanitized?
-
-Upload a file named `pwd` for example, in linux terminal this would print the current active directory. What's happening here?
-
-`;` escapes the command.
-
-Answer: `/uploads/test.txt;cd hidden && cd admin && cat flag.txt`
