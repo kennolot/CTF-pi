@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM alpine:latest
 
 COPY answers/flag.txt /tmp/flag.txt
 

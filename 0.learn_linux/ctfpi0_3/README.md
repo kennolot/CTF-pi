@@ -1,29 +1,31 @@
-### CTFPI Docker container
+## CTF-pi - Docker container - Difficulty: ★☆☆☆☆
 
-## Scenario
+### Scenario
 
 There's this Dockerfile, the task is to understand what it does and how the flag.txt
 can be retrieved without modifying the `Dockerfile` itself or looking at `answers`.
 
-The command meant to be used here is very helpful when debugging within the containers.
+The command meant to be used here is very helpful when debugging within the containers:
 
 Interactive shell!
 
-## Prerequisites
+### Prerequisites
 
-Cloned the CTF-pi repository.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Are inside the `ctfpi0_3` directory.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi0_3` directory.
 
-`docker run` command works, Docker is installed.
+`docker --version` command works, Docker is installed.
 
 ### Objective
 
-Do this task on Linux terminal: either remote connection on Raspi or your personal machine.
+Do this task on Linux terminal: remote connection on Raspberry Pi.
 
-Find the contents of flag.txt.
+Read the `Dockerfile` a file is being copied onto the container.
 
-## Steps to complete
+Get into interactive shell inside container and read the flag.txt
+
+### Steps to complete
 
 The Dockerfile is very basic, what should be of interest is the COPY command.
 
@@ -41,13 +43,13 @@ docker build --tag my-ctfpi-image .
 
 After running the command and build succeeds:
 ```
-docker run --rm --it my-ctfpi-image bash
+docker run --rm -it my-ctfpi-image /bin/sh
 ```
 `--rm` is used when you need the container to be deleted after the task for it is complete.
-`--it` when docker run is used with this command it takes you straight inside the container.
-`bash` is the shell used inside the container.
+`-it` when docker run is used with this command it takes you straight inside the container with shell.
+`/bin/sh` is the shell used inside the container.
 
-Now this commands lands us inside the container with shell access.
+Now this command lands us inside the container with shell access, meaning similar Linux commands can be run from container.
 Since we saw what the COPY inside Dockerfile did, there's nothing more to do than run:
 ```
 cat /tmp/flag.txt

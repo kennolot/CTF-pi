@@ -1,28 +1,34 @@
-### Nothing inside here?
+## CTF-pi - Nothing inside here? - Difficulty: ★☆☆☆☆
 
-## Scenario
+### Scenario
 
-When opening this directory `ctfpi0_1` from Linux terminal and running `ls` there seems to only be the README file there.
+Git repositories are a common way to get sensitive keys leaked. Most of the time this is done by an accident.
 
-But is it turly the case?
+Imagine you have just finished your project and want to upload(push) your work to the server like GitHub.
 
-## Prerequisites
+When opening this directory `ctfpi0_1` from Raspberry Pi's Linux terminal and running `ls` there seems to only be the README file there.
 
-Cloned the CTF-pi repository onto your Raspberry pi.
+But is it truly the case?
 
-Are inside the `ctfpi0_1` directory.
+Note! "dot" or "." infront of a filename or directory name in Linux means it's hidden.
+
+### Prerequisites
+
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi0_1` directory.
 
 ### Objective
 
-Do this task on Linux terminal: either remote connection on Raspi or your personal machine.
+Do this task on Linux terminal: remote connection on Raspi.
 
 Find the hidden flag.txt.
 
-## Hints
+### Hints
 
-`ls -la`  `cd` `cat` are the commands.
+`ls -la` `cd` `cat`. `-a` flag will list all the files, even hidden.
 
-## Why is this a big deal?
+### Why is this a big deal?
 
 Plenty of applications create hidden directories. Usually they're meant for storing configurations or something about the environment for the app to run properly.
 

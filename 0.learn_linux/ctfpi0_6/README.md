@@ -1,6 +1,6 @@
-### CTFPI docker compose 3 - Race condition
+## CTF-pi - Docker compose 3 - Race condition - Difficulty: ★★★☆☆
 
-## Scenario
+### Scenario
 
 In computing there's a phenomenon as race condition. They might not be easy to debug or even notice and there have been instances where a software flaw such has this was left unnoticed on a radiation therapy machine, and sadly led to loss of human lives. Another example was with GE Energy when their alarm subsystem had a race condition, making the alarming system to monitoring technicians unfunctional. This led to a blackout in 2003. https://en.wikipedia.org/wiki/Race_condition.
 
@@ -19,18 +19,18 @@ Another example might be with a bank account: imagine a bank account with $1000 
 
 In this challenge we introduce race condition with two Docker containers, first run the race condition and notice what's happening, and after that we will fix it.
 
-## Prerequisites
+### Prerequisites
 
-Cloned the CTF-pi repository.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Are inside the `ctfpi0_6` directory.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi0_6` directory.
 
 `docker compose version` command works, if not: https://docs.docker.com/compose/install/
 If the command shows the version info then docker compose is installed properly.
 
 ### Objective
 
-Do this task on  remote connection to Raspi.
+Do this on Raspberry Pi remote connection.
 
 Read through all the files except the ones in `answers/`.
 
@@ -38,7 +38,7 @@ Run `docker compose up --build`
 
 Try to understand the mistake and fix incrementer1.py and incrementer2.py
 
-## Steps to complete
+### Steps to complete
 
 First things first, let's see if the problem we think even occurs, run docker compose and read what's printed in the terminal. Is it what we expect? Answer: if incrementer1 and incrementer2 are printing out values like 1, 2, 3, 4 ... 33, 34 then there is no problem and everything is as expected.
 
@@ -51,11 +51,11 @@ Personally I saw incrementer1 printing 2433 and incrementer2 printing 3643, whic
 Now to complete this challenge the time.sleep(1) has to be commented out, but the increments should happen in sync, when one reads and writes, other shouldn't be able to do anything and vice versa.
 
 
-## Cleaning up
+### Cleaning up
 
 `docker compose down`
 
-## Role in cybersecurity
+### Role in cybersecurity
 
 It might not seem a cybersecurity topic at first, however race conditions are an easy way to cause denial of service, a function reads data that it doesn't expect for example and crashes as a result.
 

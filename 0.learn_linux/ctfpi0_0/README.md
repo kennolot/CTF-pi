@@ -1,4 +1,4 @@
-## CTF-pi - Searching the logs - 1 - Difficulty: ★☆☆☆☆
+## CTF-pi - Searching the logs - Difficulty: ★☆☆☆☆
 
 ### Scenario
 
@@ -7,7 +7,7 @@ mode and there's not a lot we can do currently. However we notice a strange fold
 
 ### Prerequisites
 
-Your Raspberry Pi has remote connection set up via Raspberry Pi connect or VNC.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
 Have cloned this `CTF-pi` repository and are inside the `ctfpi0_0` directory.
 

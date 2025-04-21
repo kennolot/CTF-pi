@@ -1,4 +1,4 @@
-## CTF-pi - Docker privilege escalation
+## CTF-pi - Docker privilege escalation - Difficulty: ★☆☆☆☆
 
 
 ### Scenario
@@ -17,9 +17,9 @@ For this challenge a flag has been hidden on the host machine, the flag has to b
 
 ### Prerequisites
 
-Cloned `CTF-pi` on Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Are in `ctfpi7_0` directory.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi0_7` directory.
 
 Docker is installed and works.
 
@@ -37,6 +37,7 @@ Docker compose is not needed here specifically, but can also be used.
 
 The simplest approach is to mount a sensitive directory, in this challenge `/answers/flag.txt`, in real world this could be `/` or `/etc` directory which will reveal sensitive host details.
 
+Another option is to use a shell from container that also works on host:
 `docker run -v /:/mnt --rm -it alpine chroot /mnt sh`
 
 
