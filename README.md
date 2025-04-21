@@ -28,7 +28,7 @@ The shell scripts and Dockerfile + docker-compose.yml are only for building the 
 
 ## Before starting - do this only for the first time
 1. `python3 -m venv /opt/ctfenv` Create a global virtual environment, fixes Docker warning.
-2. Add to /home/<username>/.bashrc at the very end: 
+2. Add to /home/username/.bashrc at the very end: 
 ```
 if [ -d "/opt/ctfenv" ]; then
     source /opt/ctfenv/bin/activate
