@@ -1,4 +1,4 @@
-## Plain text network transmission
+## CTF-pi - Plain text network transmission - Difficulty: ★☆☆☆☆
 
 ### Scenario 
 
@@ -6,15 +6,15 @@ While doing your audits you found an open port `1337` broadcasting on a Raspberr
 
 ### Prerequisites
 
-Raspberry Pi powered on. Preferably running Raspberry Pi OS.
+Install wireshark onto your main computer.
 
-Raspi connected to your router via wireless or cable
+!! Make sure your main computer is on the same network as the Raspberry !!
 
-Laptop or Desktop PC to be used for scanning the network.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Install wireshark onto your laptop/PC
+Have cloned this `CTF-pi` repository and are inside the `ctfpi5_0` directory.
 
-!! Make sure you are on the same interface as the Raspberry. If Raspberry is connected to WiFi, then should your host machine too !!
+`docker compose` works.
 
 ### Objective
 
@@ -22,16 +22,21 @@ While inside the current directory and on Pi run from the console:
 
 `docker compose up --build -d`
 
+Source code is not needed, all the info needed is that local network is used and port 1337.
 
-### Cleaning up
+Using wireshark, find the proper interface which receives data and filter by port.
 
-When done with the tasks run `docker compose down` to remove the containers and other ctf files
+Read the packet's message.
+
 
 ### **Hints**
 
-You are free to examine the source code for this challenge.
+You are free to examine the source code for this challenge when stuck.
 
 Since we know it's broadcast, then is it TCP or UDP?
 
 Wireshark filter `udp.port == 1337`
 
+### Cleaning up
+
+When done with the tasks run `docker compose down` to remove the containers and other ctf files.

@@ -1,4 +1,4 @@
-## CTF-pi - plaintext traffic
+## CTF-pi - plaintext traffic - Difficulty: ★★★☆☆
 
 ### Scenario
 
@@ -16,12 +16,13 @@ FOR MAXIMUM REALISM: edit the `backdoor.py` script so it captures the credential
 
 ### Prerequisites
 
-Remote connection or any way to input commands to Raspi's terminal.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Cloned `CTF-pi` on Raspi.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi5_2` directory.
 
-Are inside `ctfpi5_2` directory.
+`docker compose` works.
 
+`python` is installed.
 
 ### Objective
 

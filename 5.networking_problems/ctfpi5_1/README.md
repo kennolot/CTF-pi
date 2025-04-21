@@ -1,4 +1,4 @@
-## CTF-pi: Scanning a "black box"
+## CTF-pi - Scanning a "black box" - Difficulty: ★★☆☆☆
 
 ### Scenario
 
@@ -10,18 +10,18 @@ For this challenge only the machine IP is known `hostname -I`, can you find the 
 
 Note, nmap scan doesn't have to be local, anyone anywhere could run an nmap scan, even on google.com (Try it out)
 
-PS the challenge dockerfile should be ran from Pi itself, but rest of it can be done from any device.
+PS! the challenge dockerfile should be ran from Pi itself, but rest of it can be done from any device.
 
 ### Prerequisites
 
-Cloned `CTF-pi` on raspi.
-
-Are inside `ctfpi5_1` directory.
-
 `nmap` is installed on whichever system you intend to use to scan with.
 
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-### Requirements 
+Have cloned this `CTF-pi` repository and are inside the `ctfpi5_1` directory.
+
+
+### Objective 
 
 `docker compose up --build -d` and multiple services will start running on raspi.
 
