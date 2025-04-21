@@ -1,4 +1,4 @@
-## CTF-pi - Side channel attack
+## CTF-pi - Side channel attack - Difficulty: ★★★★☆
 
 ### Scenario
 
@@ -19,13 +19,17 @@ We had a hacker breach the Raspberry Pi, even though the malware they spreaded g
 
 ### Prerequisites
 
-Have cloned `CTF-pi` on Raspberry Pi.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi2_3` directory.
 
 `docker compose` works.
 
 Raspi and main computer within same local network if you wish to do the challenge from other device, not directly on Raspberry Pi.
 
 ### Objective
+
+To keep the challenge difficult, try not to read what's inside `server/`
 
 Find the hacker's C2C server. 
 

@@ -1,4 +1,4 @@
-## Encrypted logfile
+## CTF-pi - Encrypted logfile - Difficulty: ★☆☆☆☆
 
 ### Scenario
 
@@ -8,14 +8,20 @@ Find a way to crack the device's encrypted log.
 
 ### Prerequisites
 
-Can be done from your main machine, or on your Pi.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Have cloned this repository and are inside the `ctfpi2_0` directory
+Have cloned this `CTF-pi` repository and are inside the `ctfpi2_0` directory.
 
 
 ### Objective
 
-Open the `log.txt` and try to crack the code
+Open the `log.txt` and verify it's unreadable.
+
+Find which encryption is being used.
+
+Crack the encryption and meaningful text should be contained.
+
+Find the flag in format CTFPI{..}.
 
 
 ### **Hints**
@@ -23,7 +29,3 @@ Open the `log.txt` and try to crack the code
 What encryption is it? If you're not sure there are tools like hash analyzer online.
 
 Are there tools to crack this encryption online?
-
-### Completion
-
-After you think you've found the flag, you may compare your flag with the one on `answers/flag.txt`

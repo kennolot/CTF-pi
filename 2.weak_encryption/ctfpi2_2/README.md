@@ -1,4 +1,4 @@
-## Ctf-pi 2_2 - The Standard for IoT Messaging
+## CTF-pi - The Standard for IoT Messaging - Difficulty: ★★★★☆
 
 ### Scenario
 
@@ -23,7 +23,7 @@ This is called a machine-to-machine communication.
 Read more: https://www.hivemq.com/mqtt/
 
 
-For this challenge we just have a Pi which sends messages to itself.
+For this challenge we just have a Pi which sends messages to itself. (or between Pi and computer).
 
 Good thing is that the sensitive data isn't sent in plain text, but how secure is the implemented encryption.
 
@@ -33,28 +33,32 @@ HOWEVER! Even the strongest encryption will not work if the developer makes a mi
 
 And this is what has happened here.
 
+The developer published the encrypter source code and they left their private key in a variable! A pretty common mistake.
+
 
 ### Prerequisites
 
-Raspberry Pi preferrably with remote connection set up.
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Multiple computers can be used but make sure Raspberry is connected to localhost and so is the other computer. However doing it all on raspberry remote connection also works.
-
-Cloned the CTF-pi repository onto your Raspberry.
-
-Are inside the ctfpi2_2 directory.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi2_2` directory.
 
 `docker compose` works. 
+
+`python` is installed.
 
 Proper python packages are installed, check the source code or run it and read the error.
 
 ### Objective
+
+Do this challenge on Raspberry Pi remote connection. When you are sure what's going on, then `decrypt.py` can be ran from main PC, `mqtt_encrypt.py` should be ran on Raspberry Pi. Vice versa will also work.
 
 You have access to `mqtt_encrypt.py` file, this is where the encryption happens.
 
 Understand what it's doing and write a `decrypt.py` to crack the flag which is sent via a message to subscribed devices.
 
 Run `python decrypt.py` if it's ready, then `python mqtt_encrypt.py` which sends the encrypted message and decrypt reads and hopefully cracks it.
+
+Try to decode and get flag in format CTFPI{..}
 
 
 ### **Hints**
