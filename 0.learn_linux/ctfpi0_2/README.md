@@ -14,7 +14,7 @@ Have cloned CTF-pi onto your Raspberry Pi. (This challenge can be done on any ma
 
 Are inside `ctfpi0_2` directory
 
-## Requirements
+### Objective
 
 Firstly check out the code in `generator.py` and afterwards `python generator.py` to run it.
 

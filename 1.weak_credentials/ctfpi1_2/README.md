@@ -18,7 +18,7 @@ Docker is installed and working.
 `docker compose version` outputs a version, meaning docker compose works.
 
 
-### Requirements
+### Objective
 
 Run: `docker compose up --build -d`
 

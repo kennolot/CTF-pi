@@ -23,7 +23,7 @@ Cloned `CTF-pi` on Raspi.
 Are inside `ctfpi5_2` directory.
 
 
-### Requirements
+### Objective
 
 Run `docker compose up --build -d` this starts the login page.
 

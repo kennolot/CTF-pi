@@ -17,7 +17,7 @@ kernel=kernel8.img
 
 If you get memory errors on other models make sure you are using 4K pagesize. The problem with 16K which should be default on Pi 5 is that it's not supported by a-lot of software, so your application will crash right away or keep restarting due to memory errors.
 
-## Requirements
+### Objective
 
 From the scenario we can assume the version is outdated, find what version is being used and what CVEs exist for it. 
 

@@ -12,7 +12,7 @@ find a weakness where ever it is hosted.
 
 Raspi connected to your router via wireless or cable
 
-### Requirements
+### Objective
 
 While inside the current directory run from the console to start the webapp
 

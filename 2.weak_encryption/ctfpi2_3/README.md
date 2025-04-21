@@ -25,7 +25,7 @@ Have cloned `CTF-pi` on Raspberry Pi.
 
 Raspi and main computer within same local network if you wish to do the challenge from other device, not directly on Raspberry Pi.
 
-### Requirements
+### Objective
 
 Find the hacker's C2C server. 
 

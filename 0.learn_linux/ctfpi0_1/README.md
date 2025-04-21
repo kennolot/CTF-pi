@@ -12,7 +12,7 @@ Cloned the CTF-pi repository onto your Raspberry pi.
 
 Are inside the `ctfpi0_1` directory.
 
-## Requirements
+### Objective
 
 Do this task on Linux terminal: either remote connection on Raspi or your personal machine.
 

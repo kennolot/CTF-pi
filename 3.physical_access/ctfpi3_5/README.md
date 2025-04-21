@@ -18,7 +18,7 @@ Raspi connection, either remote or physical.
 
 Are inside `ctfpi3_5` in terminal.
 
-## Requirements
+### Objective
 
 For this we need a Raspberry Pi which acts as the computer behind code lock.
 

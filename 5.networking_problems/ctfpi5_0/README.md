@@ -16,7 +16,7 @@ Install wireshark onto your laptop/PC
 
 !! Make sure you are on the same interface as the Raspberry. If Raspberry is connected to WiFi, then should your host machine too !!
 
-### Requirements
+### Objective
 
 While inside the current directory and on Pi run from the console:
 

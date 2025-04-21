@@ -23,7 +23,7 @@ Are in `ctfpi7_0` directory.
 
 Docker is installed and works.
 
-### Requirements
+### Objective
 
 Find the flag on host system under `/answers/flag.txt` from the Docker container.
 

@@ -16,7 +16,7 @@ Have cloned CTF-pi repository onto your Pi.
 
 Are currently inside the `ctfpi7_2` directory.
 
-## Requirements
+### Objective
 
 `docker compose up --build -d` to pull OWASP juice shop and launch the app.
 

@@ -14,7 +14,7 @@ Are inside the `ctfpi0_4` directory.
 
 `docker compose version` command works, if not: https://docs.docker.com/compose/install/
 
-## Requirements
+### Objective
 
 Do this task on Linux terminal: either remote connection on Raspi or your personal machine.
 

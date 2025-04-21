@@ -22,7 +22,7 @@ Are currently in the `ctfpi3_4` directory in your raspi's terminal.
 Read before you run `sudo python codelock.py`
 
 
-## Requirements
+### Objective
 
 This challenge is meant to be solved with multimeter, however there are more ways(Steps to complete for further info).
 

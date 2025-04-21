@@ -10,7 +10,7 @@ Raspberry Pi powered on. Preferably running Raspberry Pi OS
 
 Raspi connected to your router via wireless or cable
 
-### Requirements
+### Objective
 
 While inside the current directory run from the console to start the webapp
 

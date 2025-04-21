@@ -14,7 +14,7 @@ Have cloned this repository and are inside the `ctfpi1_0` directory
 
 
 
-### Requirements
+### Objective
 
 Run these commands to create the weak ctf user:
 `chmod +x create_acc.sh` `./create_acc.sh`

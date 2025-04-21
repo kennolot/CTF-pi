@@ -22,7 +22,7 @@ Have cloned CTF-pi repository onto your Pi.
 
 Are currently inside the `ctfpi7_0` directory.
 
-## Requirements
+### Objective
 
 `docker compose up --build -d` to pull Home Assistant and launch the app.
 

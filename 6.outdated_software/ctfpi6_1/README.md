@@ -13,7 +13,7 @@ Raspberry Pi
 Cloned CTF-pi onto your Raspi.
 
 
-### Requirements
+### Objective
 
 Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell/physical keyboard and mouse)
 

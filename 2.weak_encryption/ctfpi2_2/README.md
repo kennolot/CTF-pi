@@ -48,7 +48,7 @@ Are inside the ctfpi2_2 directory.
 
 Proper python packages are installed, check the source code or run it and read the error.
 
-### Requirements
+### Objective
 
 You have access to `mqtt_encrypt.py` file, this is where the encryption happens.
 

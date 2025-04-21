@@ -14,7 +14,7 @@ Can be done from your main machine, or on your Pi.
 
 Have cloned this repository and are inside the `ctfpi2_1` directory
 
-### Requirements
+### Objective
 
 Open the files ex `log1.txt` and try to crack the code
 

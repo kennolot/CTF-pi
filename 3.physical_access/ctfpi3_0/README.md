@@ -17,7 +17,7 @@ In this scenario we are building our own BadUSB, a device when plugged into anot
 
 1x Raspberry Pi as the victim device.
 
-### Requirements
+### Objective
 
 For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Austin's Lab)
 

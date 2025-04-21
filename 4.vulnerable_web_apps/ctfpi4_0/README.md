@@ -13,7 +13,7 @@ Raspi connected to your router via wireless or cable
 
 Have cloned this repository and are inside the `ctfpi4_0` directory
 
-### Requirements
+### Objective
 
 Run `docker compose up --build -d`
 

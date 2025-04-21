@@ -23,7 +23,7 @@ Are currently inside the `ctfpi7_1` directory.
 Installed `requests` via pip. 
 `sudo chown -R <raspi_user>:<raspi_user> /opt/ctfenv` Command might be needed if you get errors with pip install permission denied.
 
-## Requirements
+### Objective
 
 `docker compose up --build -d` to pull Home Assistant and launch the app.
 

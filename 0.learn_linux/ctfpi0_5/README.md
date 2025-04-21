@@ -19,7 +19,7 @@ Are inside the `ctfpi0_5` directory.
 `docker compose version` command works, if not: https://docs.docker.com/compose/install/
 If the command shows the version info then docker compose is installed properly.
 
-## Requirements
+### Objective
 
 Do this task using remote connection on Raspi.
 
