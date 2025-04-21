@@ -1,4 +1,4 @@
-## Weak/common linux user credentials
+## CTF-pi - Weak/common linux user credentials - Difficulty: ★☆☆☆☆
 
 ### Scenario 
 
@@ -6,11 +6,13 @@ You've gotten your hands on a Raspberry Pi that comes with already some users cr
 
 People sometimes forget to change default passwords in a hurry, or also set a very weak password and think they'll change it later. Let's try and see if this is the case here.
 
+This simple challenge shows that even a person without computer skills can just guess weak passwords.
+
 ### Prerequisites
 
-Be on your Raspberry Pi(VNC, Raspi connect, keyboard&mouse)
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Have cloned this repository and are inside the `ctfpi1_0` directory
+Have cloned this `CTF-pi` repository and are inside the `ctfpi1_0` directory.
 
 
 
@@ -18,6 +20,8 @@ Have cloned this repository and are inside the `ctfpi1_0` directory
 
 Run these commands to create the weak ctf user:
 `chmod +x create_acc.sh` `./create_acc.sh`
+
+To keep the challenge little more difficult do not read `create_acc.sh` at first, since the code contains passwords you'd normally have to figure out.
 
 After the script finishes try to log into a newly created account.
 
@@ -31,7 +35,7 @@ NOTE! After running the script again it deletes the old ctf user and generates a
 
 What is usually the default password of Raspberry Pi?
 
-Common passwords of embedded devices?
+Common passwords unsecure devices?
 
 Try finding examples of weak passwords online.
 

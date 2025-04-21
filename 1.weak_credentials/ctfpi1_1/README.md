@@ -1,4 +1,4 @@
-## Weak credentials - default configuration
+## CTF-pi - Weak credentials - Default configuration - Difficulty: ★☆☆☆☆
 
 ### Scenario 
 
@@ -11,7 +11,9 @@ Now you, the attacker found out about it, can you find a way to retrieve data fr
 
 ### Prerequisites
 
-Have cloned this repository and are inside the `ctfpi1_1` directory
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi1_1` directory.
 
 Docker is installed and working.
 
@@ -20,7 +22,15 @@ Docker is installed and working.
 
 ### Objective
 
-Run: `docker compose up --build -d`
+To keep the challenge more difficult do not read `compose.yaml` and `init.sh`. After completion you may freely check them out.
+
+Run: `docker compose up --build -d` on Raspberry Pi.
+
+`hostname -I` to find out the IP, where redis is running on, usually it's the first IP.
+
+Also find the default redis port.
+
+Do this task on Raspberry Pi, over a remote connection.
 
 Find the default login and a way to retrieve the hidden flag from redis.
 
@@ -29,9 +39,10 @@ Find the default login and a way to retrieve the hidden flag from redis.
 Do we even need a username or password?
 
 `hostname -I` to find out the IP.
+
 `redis-cli -h <ip>`
 
-Make sure redis-cli is installed
+Make sure `redis-cli` is installed
 
 `keys *` to retrieve all set keys
 
