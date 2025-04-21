@@ -1,4 +1,4 @@
-### OWASP juice shop - going further
+### CTF-pi - OWASP juice shop - going further - Difficulty: ???
 
 All credits go to: https://hub.docker.com/r/bkimminich/juice-shop
 

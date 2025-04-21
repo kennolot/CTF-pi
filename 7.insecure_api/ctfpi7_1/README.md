@@ -1,6 +1,6 @@
-### Home assistant - REST API
+## CTF-pi - Home assistant - REST API - Difficulty: ★★☆☆☆
 
-## Scenario
+### Scenario
 
 Another option is to use REST API with home assistant, when webhooks' main idea is to trigger every time an event happens and on its own, then REST works by pulling instead, so for example to check if lights are on, a request asking the device has to be sent.
 
@@ -14,7 +14,7 @@ In this challenge we will see that a leaked API key is pretty much as valuable t
 
 https://developers.home-assistant.io/docs/api/rest/ Provides everything someone could do when they have authorized themselves with an API key.
 
-## Prerequisites
+### Prerequisites
 
 Have cloned CTF-pi repository onto your Pi.
 
@@ -39,7 +39,7 @@ Try using it with the provided `request.py` script.
 
 NOTE! There is NO flag.txt for this challenge.
 
-## Steps to complete
+### Steps to complete
 
 While on the Dashboard of home assistant go to > profile > Security > Long-lived access tokens > Create token > name it anything > Copy to clipboard. 
 
@@ -53,6 +53,6 @@ https://developers.home-assistant.io/docs/api/rest/ Check out other possible req
 
 
 
-## Cleaning up
+### Cleaning up
 
 `docker compose down` in Raspi's terminal. 

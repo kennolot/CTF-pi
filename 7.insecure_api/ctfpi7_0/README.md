@@ -1,6 +1,6 @@
-### Home assistant - webhooks
+## CTF-pi - Home assistant - webhooks - Difficulty: ★☆☆☆☆
 
-## Scenario
+### Scenario
 
 It's time to try out home automation, for that there's a well established free and open-source project called "Home Assistant".
 
@@ -16,7 +16,7 @@ This comes with a security risk, the webhook could trigger on every log in and r
 
 Webhooks can also be used to toggle electronic devices within your house and someone flicking your lights wouldn't be desired.
 
-## Prerequisites
+### Prerequisites
 
 Have cloned CTF-pi repository onto your Pi.
 
@@ -35,7 +35,7 @@ Do the onboarding registration with some dummy data, doesn't have to be your rea
 Create a webhook via the web UI. Webhook should send a persistent notification.
 
 
-## Steps to complete
+### Steps to complete
 
 While inside the Home Assistant dashboard go to Settings > Automations & scenes > Create Automation > Create new automation.
 
@@ -54,6 +54,6 @@ Check the notifications on your Home Assistant dashboard. A device with no authe
 Check out the other triggers and conditions and try to find weaknesses in them.
 
 
-## Cleaning up
+### Cleaning up
 
 `docker compose down` in Raspi's terminal. 
