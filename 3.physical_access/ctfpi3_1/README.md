@@ -1,4 +1,4 @@
-### Physical Access - Exploiting open USB ports with our own BadUSB. 2.
+### CTF-pi - Physical Access - Exploiting open USB ports with our own BadUSB 2 - Difficulty: ★★★☆☆
 
 ## Scenario
 
@@ -8,13 +8,17 @@ However for this challenge let's try something littler "quieter". Let's try taki
 
 NOTE!
 
-For this challenge there is no flag.txt, the challenge is completed when you have a screenshot taken from raspi on your main PC.
+For this challenge there is no flag.txt, the challenge is completed when you have a screenshot taken from Raspberry Pi viewable from your main machine.
 
 ## Prerequisites
 
 Have a pico-ducky that we made in the previous challenge working.
 
 Raspberry Pi ready to be hacked.
+
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi3_1` directory.
 
 ## Requirements 
 

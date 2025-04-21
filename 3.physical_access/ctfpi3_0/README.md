@@ -1,4 +1,4 @@
-## Physical Access - Exploiting open USB ports with our own BadUSB.
+## CTF-pi - Physical Access - Exploiting open USB ports with our own BadUSB - Difficulty: ★★★☆☆
 
 
 ### Scenario
@@ -11,11 +11,11 @@ In this scenario we are building our own BadUSB, a device when plugged into anot
 
 ### Prerequisites
 
-1x **Raspberry Pico** or equivalent like Arduino etc.
+Have a **Raspberry Pico** or equivalent like Arduino etc that can be turned into BadUSB.
 
-1x A data transmitting USB A -> Micro USB(Typically) cable or an adapter.
+Have a data transmitting USB A -> Micro USB(Typically) cable or an adapter.
 
-1x Raspberry Pi as the victim device.
+Have your Raspberry Pi as the victim device.
 
 ### Objective
 
@@ -23,8 +23,9 @@ For a video tutorial: https://www.youtube.com/watch?v=ctCmOhoT9po (Guide by Aust
 
 When using Raspberry Pico, we need to download https://github.com/dbisu/pico-ducky and follow the instructions provided on this page.
 
-Run the following commands on Raspberry Pi when inside the directory that contains this manual `cp answers/flag.txt ~`
+Run the following commands on Raspberry Pi when inside the directory that contains this manual `cp answers/flag.txt ~`, we'll just copy the flag onto home directory for easier access, do not read it as you'll be using BadUSB to read it.
 
+Create your own `payload.dd` for pico & save it there, when plugged into the USB of Raspberry Pi gives you shell access remotely or in any way read the flag.txt in home directory.
 
 ### Steps to complete
 

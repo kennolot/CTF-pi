@@ -1,4 +1,4 @@
-### Physical Access - Messing with GPIO pins.
+## CTF-pi - Physical Access - Messing with GPIO pins - Difficulty: ★★★★☆
 
 **WARNING**
 
@@ -6,23 +6,24 @@ Make sure you are absolutely certain that you have connected the proper pins bet
 
 Ex: 5V into a 3.3V will damage your device. Also 3.3V output into a 0V output will also damage your device, if you are not certain find information online or don't practically do the task at all, reading the code provided will give a good idea aswell.
 
-## Scenario
+### Scenario
 
 I've built a simple codelock prototype, and one day I want to start selling it to the world.
 Can you run my code and test if it is secure?
 
-## Prerequisites
+### Prerequisites
 
-Have a remote connection or in any other way a way to access Raspberry Pi's terminal
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Cloned the `CTF-pi` onto your Raspberry Pi.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi3_4` directory.
 
-Are currently in the `ctfpi3_4` directory in your raspi's terminal.
+`python` is working.
 
-Read before you run `sudo python codelock.py`
-
+Have a multimeter OR pico.
 
 ### Objective
+
+Read the code itself before you run `sudo python codelock.py` on Raspberry Pi.
 
 This challenge is meant to be solved with multimeter, however there are more ways(Steps to complete for further info).
 
@@ -33,7 +34,7 @@ For option 2 you'll need a Raspi and a Raspberry Pico, an USB cable and 2 jumper
 For option 3 you'll only need the Raspi to run the code on.
 
 
-## Steps to complete
+### Steps to complete
 
 **Option one:**
 
@@ -77,3 +78,8 @@ Connect the Pico's ground to Pi's ground and start connecting the other jumper w
 Since this codelock logic is weak, one can just simply try all the GPIO pin numbers in the terminal, nothing gets reset and there's no timeouts. This is also called brute forcing.
 
 Simply keep the pinout open and input the GPIOx, "x" being the digit.
+
+
+### Cleaning up
+
+Press CTRL+C to exit the python program.

@@ -1,6 +1,6 @@
-### Physical Access - Reading from exposed UART pins.
+## CTF-pi - Physical Access - Reading from exposed UART pins - Difficulty: ★★★☆☆
 
-## Scenario
+### Scenario
 
 You've found a Raspberry Pi seemingly all by itself, you notice it has power and also has a few wires connecting it to another device.
 
@@ -9,7 +9,7 @@ It seems the connections correspond to UART, what could it mean?
 Let's see if we can read what's being transmitted.
 
 
-## Prerequisites
+### Prerequisites
 
 Have a microcontroller like raspberry pico or arduino etc. A way to read UART pins.
 
@@ -21,11 +21,17 @@ Jumper cables, typically F-F.
 
 USB cable.
 
-## Requirements 
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
+
+Have cloned this `CTF-pi` repository and are inside the `ctfpi3_3` directory.
+
+Make sure `python` is installed, also the libraries needed (serial).
+
+### Objective 
 
 Make sure Raspberry Pi (NOT pico) has UART enabled. For that click on top-left on raspberry logo > Preferences > Raspberry Pi Configuration > Interfaces > Enable Serial Port and disable Serial Console. Remember what was there before so we can change these back afterwards. Reboot.
 
-On raspberry Pi run
+On raspberry Pi: run
 ```
 pip install pyserial
 ```
@@ -63,18 +69,18 @@ The end result should look something like this: (ignore the bottom GREEN, BLACK,
 
 Now everything needed should be done, run `send_flag.py` on Raspberry Pi.
 
+Onto the actual challenge, for Pico write a code `read_flag.py`  that reads UART data and prints it. We shall uncover the secrets sent to us by Raspberry Pi. Find which baudrate is common and try it, when output is logical then baudrate is probably chosen correctly.
 
-## Steps to solve
 
-Onto the actual challenge, for Pico write a code `read_flag.py`  that reads UART data and prints it. We shall uncover the secrets sent to us by Raspberry Pi.
+### **Hints**
 
-Check the source code from `send_flag.py` and try to read the flag.
+When stuck you may read source code from `send_flag.py`.
 
-Check the comment, if you get port errors or don't receive anything at all you may need to change serial port to your own.
+Check the comment on `send_flag.py`, if you get port errors or don't receive anything at all you may need to change serial port to your own, for Pi 5 it should be `/dev/ttyAMA0`.
 
 If you get stuck there's a solution file in `answers/`
 
 
-## Cleaning up
+### Cleaning up
 
 Revert the settings if needed. Disable Serial Port, enable Serial Console, or however it was before.
