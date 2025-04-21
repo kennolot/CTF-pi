@@ -1,4 +1,4 @@
-## Outdated software - Grafana
+## CTF-pi - Outdated software - Grafana - Difficulty: ★★☆☆☆
 
 ### Scenario 
 
@@ -10,20 +10,22 @@ For this challenge we know the `username: ctfpi` `password: ctfpi`
 
 ### Prerequisites
 
-Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Cloned CTF-pi onto your Raspi.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi6_0` directory.
+
+`docker compose` works.
 
 
 ### Objective
 
-Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell/physical keyboard and mouse)
+Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell)
 
 `hostname -I` to find out which IP the service is running on and visit it in your browser. Your main computer or even a phone can access this, as long as they are within the same network as Raspberry Pi.
 
 Which port is Grafana running on by default? Find out.
 
-Find an existing vulnerability and exploit it, once you think you figured it out check: `answers/flag.txt`. NOTE! The flag IS NOT a text file you need to find!!
+Find an existing vulnerability and exploit it(HTML injection), once you think you figured it out check: `answers/flag.txt`. NOTE! The flag IS NOT a text file you need to find!!
 
 
 ### Steps to complete

