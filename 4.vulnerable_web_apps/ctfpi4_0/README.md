@@ -15,7 +15,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi4_0` directory.
 
 ### Objective
 
-Run `docker compose up --build -d` on Raspberry Pi.
+Run `docker compose up -d` on Raspberry Pi.
 
 `hostname -I` and enter one of the IPs there into your browser on your main machine(make sure Raspi and main PC are in the same network).
 

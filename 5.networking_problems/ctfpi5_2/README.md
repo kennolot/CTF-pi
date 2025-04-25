@@ -26,7 +26,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi5_2` directory.
 
 ### Objective
 
-Run `docker compose up --build -d` this starts the login page.
+Run `docker compose up -d` this starts the login page.
 
 First: go to `hostname -I` outputted IP address from your main machine `http://10.10.10.67/` using your browser.
 

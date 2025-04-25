@@ -20,7 +20,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi5_0` directory.
 
 While inside the current directory and on Pi run from the console:
 
-`docker compose up --build -d`
+`docker compose up -d`
 
 Source code is not needed, all the info needed is that local network is used and port 1337.
 

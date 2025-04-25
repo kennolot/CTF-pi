@@ -17,7 +17,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi0_0` directory.
 
 ### Objective
 
-Run within this directory on Raspi: `docker compose up --build -d` (Using remote shell)
+Run within this directory on Raspi: `docker compose up -d` (Using remote shell)
 
 `hostname -I` to find out which IP the service is running on and visit it in your browser. Your main computer or even a phone can access this, as long as they are within the same network as Raspberry Pi.
 

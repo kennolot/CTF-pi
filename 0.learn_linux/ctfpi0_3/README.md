@@ -29,7 +29,7 @@ Get into interactive shell inside container and read the flag.txt
 
 The Dockerfile is very basic, what should be of interest is the COPY command.
 
-When container is ran all it does is COPY <source host> <destination container>
+When container is ran all it does is COPY \[source host\] \[destination container\]
 
 The first problem with this Dockerfile is that nothing gets built and ran.
 

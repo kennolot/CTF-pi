@@ -14,7 +14,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi4_2` directory.
 
 While inside the current directory run from the terminal to start the webapp:
 
-`docker compose up --build -d`
+`docker compose up -d`
 
 Open up  `app/app.py` and read the source code.
 

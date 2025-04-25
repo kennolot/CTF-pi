@@ -19,7 +19,7 @@ Only read the source code after the challenge is solved.
 
 While inside the current directory run from the console to start the webapp:
 
-`docker compose up --build -d`
+`docker compose up -d`
 
 `hostname -I` and find the running webapp.
 

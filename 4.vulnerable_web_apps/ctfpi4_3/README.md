@@ -18,9 +18,9 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi4_3` directory.
 
 Run:
 
-`docker compose up --build -d`
+`docker compose up -d`
 
-`hostname -I` and go to http://<ip-address> from Pi remote connection
+`hostname -I` and go to http://ip-address from Pi remote connection
 or a machine that's connected to the same local network where Pi hosts the webapp.
 
 `app.py` is NOT meant to be viewed for solving this challenge

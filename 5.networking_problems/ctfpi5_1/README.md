@@ -23,7 +23,7 @@ Have cloned this `CTF-pi` repository and are inside the `ctfpi5_1` directory.
 
 ### Objective 
 
-`docker compose up --build -d` and multiple services will start running on raspi.
+`docker compose up -d` and multiple services will start running on raspi.
 
 Run `nmap <hostname -I>` aka place your raspi's IP there to start the scan. Note, you may need to dig deeper than default scan.
 

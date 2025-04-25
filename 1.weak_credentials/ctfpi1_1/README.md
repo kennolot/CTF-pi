@@ -24,7 +24,7 @@ Docker is installed and working.
 
 To keep the challenge more difficult do not read `compose.yaml` and `init.sh`. After completion you may freely check them out.
 
-Run: `docker compose up --build -d` on Raspberry Pi.
+Run: `docker compose up -d` on Raspberry Pi.
 
 `hostname -I` to find out the IP, where redis is running on, usually it's the first IP.
 
