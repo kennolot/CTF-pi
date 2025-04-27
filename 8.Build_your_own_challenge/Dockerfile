@@ -1,1 +1,1 @@
-# currently empy, just as sample for directory structure
+# currently empty, just as sample for directory structure
