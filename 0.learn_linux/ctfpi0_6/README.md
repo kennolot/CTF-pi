@@ -36,19 +36,21 @@ Read through all the files except the ones in `answers/`.
 
 Run `docker compose up --build`
 
-Try to understand the mistake and fix incrementer1.py and incrementer2.py
+Both of the python programs will read the counter from a file and increment it.
+
+Try to understand the mistake and fix `increment_1.py` and `increment_2.py`
 
 ### Steps to complete
 
-First things first, let's see if the problem we think even occurs, run docker compose and read what's printed in the terminal. Is it what we expect? Answer: if incrementer1 and incrementer2 are printing out values like 1, 2, 3, 4 ... 33, 34 then there is no problem and everything is as expected.
+First things first, let's see if the problem we think even occurs, run docker compose and read what's printed in the terminal. Is it what we expect? Answer: at first everything will probably run fine, but keep a close eye on the output and be ready to terminate the program(CTRL+C) when an error gets displayed. Sometimes error might happen early, sometimes it will run for a minute without errors.
 
-Now comment out the time.sleep(1) for both of the incrementer1.py and incrementer2.py. Run docker compose again.
+The error should be about JSON data not being correct.
 
-The values are printed really fast, basically as fast as the system is able to. Hit CTRL+C to stop the program and scroll above to see the values.
+To complete this challenge fix `increment_1.py` and `increment_2.py` so that they politely take turns updating the incrementer, working in sync with eachother. 
 
-Personally I saw incrementer1 printing 2433 and incrementer2 printing 3643, which is completely incorrect. We also probably expect incrementer1 and incrementer2 take turns in incrementing the value. But I saw times where incrementer2 got called 5 times in a row.
+The challenge will be solved when no error gets displayed until incrementer reaches 3000.
 
-Now to complete this challenge the time.sleep(1) has to be commented out, but the increments should happen in sync, when one reads and writes, other shouldn't be able to do anything and vice versa.
+A very big HINT: fcntl.flock()
 
 
 ### Cleaning up

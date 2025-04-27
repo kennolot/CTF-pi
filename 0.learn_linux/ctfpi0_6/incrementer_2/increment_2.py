@@ -1,21 +1,27 @@
 import time
+import json
 
 # clear the file before anything
-open("/app/answers/counter.txt", "w").close()
+with open("/app/answers/counter.txt", "w") as f:
+    json.dump({"count": 0}, f)
 
-while True:
-	# comment this out after part 1
-	time.sleep(1)
-	# using volumes, the count gets written into a shared file
-	with open("/app/answers/counter.txt", "r+") as f:
+while True:    
+    with open("/app/answers/counter.txt", "r+") as f:                
+        time.sleep(0.05) # helps with viewing so values dont fly past too fast
+        try:
+            data = json.load(f)            
+        #except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
+            print("json ERROR, Currently reading empty or corrupted value:")
+            print("======================")
+            print(e)
+            print("======================")
+            data = {"count": 0}
 
-		try:
-			counter = int(f.read().strip())		
-		except:
-			counter = 0
+        count = data.get("count")
+        print(data)
 
-		print("Reading from counter.txt:", counter)
-		counter += 1
-		f.seek(0)
-		f.write(str(counter))
-		f.truncate()
+        count += 1
+        f.seek(0)
+        f.truncate()
+        json.dump({"count": count}, f)
