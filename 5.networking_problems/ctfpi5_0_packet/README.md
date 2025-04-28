@@ -1,4 +1,4 @@
-## CTF-pi - Plain text network transmission - Difficulty: ★☆☆☆☆
+## CTF-pi - Famous packet - Difficulty: ★☆☆☆☆
 
 ### Scenario 
 
