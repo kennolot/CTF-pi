@@ -1,7 +1,7 @@
 services:
   fluent-bit:
     container_name: fluent-bit-vulnerable
-    image: "fluent/fluent-bit:3.0.2-arm64"
+    image: "fluent/fluent-bit:3.0.2"
     ports:
       - "2020:2020"
       - "8888:8888"
