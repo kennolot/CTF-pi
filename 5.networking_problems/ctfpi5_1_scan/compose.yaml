@@ -5,7 +5,7 @@ services:
       - "80:80"
 
   dummy_ssh:
-    image: linuxserver/openssh-server:arm64v8-latest
+    image: linuxserver/openssh-server:latest
     ports:
       - "22:2222"
     environment:
