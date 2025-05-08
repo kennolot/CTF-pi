@@ -22,6 +22,27 @@ The goal is to show common misconfigurations and the effect it has on the securi
 
 " The "S" in IoT Stands for "Security" "
 
+## Installing docker & compose for Raspberry Pi
+
+1. Make sure you're connected to the internet.
+2. Open the terminal.
+3. Follow https://pimylifeup.com/raspberry-pi-docker/
+
+## How to run CTF-pi
+
+1. Clone the repository onto your Raspberry Pi
+2. Find a challenge you like and open up it's directory from terminal
+3. Read `README.md` for setup and steps to solve
+4. Find a hidden flag or solution to complete the challenge
+5. (Optional) Tinker around and maybe find weaknesses not covered in the manual
+6. After using make sure to stop the containers and remove the CTF files, this can be done either manually or via `docker compose down`
+
+## General guidelines when completing the challenges
+
+For some challenges you will see a folder called 'answers', within is a flag.txt that contains the answer. Some challenges also provide a solution script of some sort. So it's best to look at them when you're stuck or have completed the challenge.
+
+The shell scripts and Dockerfile + compose.yaml are only for building the tasks unless specified otherwise. They might spoil the challenge so be aware of that when looking at them. It is always a good practice to review unknown code though.
+
 ## How is CTF-pi different?
 
 The user has no restrictions on how far to exploit the device. After finding the `flag.txt`, there is generally a way to further exploit the device or just tinker around. The user also doesn't have restrictions on what exploits to use, a BadUSB for example can be used to attack a web application, even though it's not talked about in manual.
@@ -29,13 +50,6 @@ The user has no restrictions on how far to exploit the device. After finding the
 CTF-pi has more focus towards physical security, where the attacker might already be sitting next to the device or be inside the same network as the IoT device. A few spoilers: BadUSB challenges and sniffing local network traffic.
 
 If needed CTF-pi can be run offline.
-
-
-## General guidelines when completing the challenges
-
-For some challenges you will see a folder called 'answers', within is a flag.txt that contains the answer. Some challenges also provide a solution script of some sort. So it's best to look at them when you're stuck or have completed the challenge.
-
-The shell scripts and Dockerfile + compose.yaml are only for building the tasks unless specified otherwise. They might spoil the challenge so be aware of that when looking at them. It is always a good practice to review unknown code though.
 
 ## Before starting - do this only for the first time
 1. `python3 -m venv /opt/ctfenv` Create a global virtual environment, fixes Docker warning.
@@ -62,11 +76,6 @@ kernel=kernel8.img
 ```
 Make sure to reboot the Raspberry after the change, the pagesize can be reverted by removing this line.
 
-## How to run CTF-pi
-
-1. Clone the repository onto your Raspberry Pi
-2. Find a challenge you like and open up it's directory
-3. Read `README.md` for setup and steps to solve
-4. Find a hidden flag or solution to complete the challenge
-5. (Optional) Tinker around and maybe find weaknesses not covered in the manual
-6. After using make sure to stop the containers and remove the CTF files, this can be done either manually or via `docker compose down`
+## SSH connection hangs
+The issue could be Raspi's WiFi power saving, try disabling it.
+Try this command: `sudo iw wlan0 set power_save off`
