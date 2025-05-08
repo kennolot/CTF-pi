@@ -1,6 +1,6 @@
 # CTF-pi 🥪🏴‍☠️
 
-UPDATE: Don't have a Raspberry Pi? No worries, now every category of challenges except 3.physical_access can be completed from a Linux computer or Virtual Machine.
+UPDATE: Don't have a Raspberry Pi? No worries, now every category of challenges except 3.physical_access can be completed from a Linux computer or Virtual Machine. Make sure same local network is used, or Virtual Machine networking uses bridge.
 
 **Contains manuals and containers to turn your Raspberry Pi into a local CTF box. WARNING: THIS WILL MAKE YOUR RASPBERRY PI INSECURE!!!**
 
