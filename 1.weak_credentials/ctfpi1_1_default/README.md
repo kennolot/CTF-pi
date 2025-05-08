@@ -36,6 +36,9 @@ Find the default login and a way to retrieve the hidden flag from redis.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+  
 Do we even need a username or password?
 
 `hostname -I` to find out the IP.
@@ -49,6 +52,8 @@ Make sure `redis-cli` is installed
 `get <key>`
 
 `quit` to leave redis-cli
+
+</details>
 
 ### Cleaning up
 
