@@ -29,6 +29,9 @@ Create your own `payload.dd` for pico & save it there, when plugged into the USB
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 After setting up the BadUSB device, we are now ready to write our own simple payload.
 
 Open up a text editor(even Notepad is fine) and name it `payload.dd`.
@@ -46,6 +49,7 @@ When using the example provided we can see it uses python http.server to display
 To view the address the server is at we run `hostname -I` from the Raspberry Pi remote connection ex. 10.10.10.24 so it's at http://10.10.10.24:8000.
 We can simply visit local address we have and flag.txt file should be hosted there, containing our answer.
 
+</details>
 
 ### Cleaning up
 
