@@ -41,6 +41,9 @@ NOTE! There is NO flag.txt for this challenge.
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 While on the Dashboard of home assistant go to > profile > Security > Long-lived access tokens > Create token > name it anything > Copy to clipboard. 
 
 Edit the python script with your token and IP.
@@ -51,7 +54,7 @@ What potentially valuable information can you find?
 
 https://developers.home-assistant.io/docs/api/rest/ Check out other possible requests.
 
-
+</details>
 
 ### Cleaning up
 
