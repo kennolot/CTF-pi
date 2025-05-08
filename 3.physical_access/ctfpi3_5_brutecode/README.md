@@ -49,4 +49,9 @@ After a correct PIN is inserted, the imaginary door opens and the flag gets outp
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 `bruteforce.py` has a solution already made, it's just commented.
+
+</details>
