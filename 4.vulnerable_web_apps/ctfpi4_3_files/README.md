@@ -31,10 +31,14 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 The flag is hidden in a directory, other than /uploads or /.
 
 The hidden flag directory is guessable, but tools like `gobuster` `dirbuster` etc can be used aswell.
 
+</details>
 
 ### Cleaning up
 
