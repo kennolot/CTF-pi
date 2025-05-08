@@ -50,7 +50,12 @@ For extra challenge try creating `backdoor.py` which reads the credentials from 
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 When capturing with tcpdump `| grep username` can be used for less messy output.
+
+</details>
 
 ### Cleaning up
 
