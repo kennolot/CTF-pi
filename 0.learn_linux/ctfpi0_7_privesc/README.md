@@ -31,6 +31,8 @@ Use any means necessary. There will be multiple solutions.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
 https://gtfobins.github.io/gtfobins/docker/
 
 Docker compose is not needed here specifically, but can also be used.
@@ -39,7 +41,7 @@ The simplest approach is to mount a sensitive directory, in this challenge `/ans
 
 Another option is to use a shell from container that also works on host:
 `docker run -v /:/mnt --rm -it alpine chroot /mnt sh`
-
+</details>
 
 ### Cleaning up
 
