@@ -27,6 +27,9 @@ Get into interactive shell inside container and read the flag.txt
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 The Dockerfile is very basic, what should be of interest is the COPY command.
 
 When container is ran all it does is COPY \[source host\] \[destination container\]
@@ -55,3 +58,5 @@ Since we saw what the COPY inside Dockerfile did, there's nothing more to do tha
 cat /tmp/flag.txt
 ```
 After the flag type `exit` to leave interactive shell.
+
+</details>
