@@ -31,6 +31,9 @@ Find the weakness, and flag.txt to solve it.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 The port is not well known.
 
 The SSH and FTP and HTTP services(common ports) are misleading for this challenge. Even if you manage to hack your way in, they most likely are a dead end.
@@ -44,6 +47,8 @@ Try more nmap capabilities like default NSE scripts, version detection, agressiv
 Now with more details the actual vulnerable application can be identified.
 
 Use the knowledge from `4.vulnerable_web_apps` to find the flag.txt
+
+</details>
 
 ### Cleaning up
 
