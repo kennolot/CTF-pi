@@ -42,6 +42,8 @@ Try to understand the mistake and fix `increment_1.py` and `increment_2.py`
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
 First things first, let's see if the problem we think even occurs, run docker compose and read what's printed in the terminal. Is it what we expect? Answer: at first everything will probably run fine, but keep a close eye on the output and be ready to terminate the program(CTRL+C) when an error gets displayed. Sometimes error might happen early, sometimes it will run for a minute without errors.
 
 The error should be about JSON data not being correct.
@@ -51,7 +53,7 @@ To complete this challenge fix `increment_1.py` and `increment_2.py` so that the
 The challenge will be solved when no error gets displayed until incrementer reaches 3000.
 
 A very big HINT: fcntl.flock()
-
+</details>
 
 ### Cleaning up
 
