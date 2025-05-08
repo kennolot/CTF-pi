@@ -36,6 +36,9 @@ For option 3 you'll only need the Raspi to run the code on.
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 **Option one:**
 
 Multimeter, the logic of the codelock is flawed, so every correct PIN code input pin that needs to be pressed is in HIGH state(3.3V). 
@@ -79,6 +82,7 @@ Since this codelock logic is weak, one can just simply try all the GPIO pin numb
 
 Simply keep the pinout open and input the GPIOx, "x" being the digit.
 
+</details>
 
 ### Cleaning up
 
