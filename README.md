@@ -2,6 +2,8 @@
 
 **Contains manuals and containers to turn your Raspberry Pi into a local CTF box. WARNING: THIS WILL MAKE YOUR RASPBERRY PI INSECURE!!!**
 
+UPDATE: Don't have a Raspberry Pi? No worries, now every category of challenges except 3.physical_access can be completed from a Linux computer or Virtual Machine.
+
 **Please make a backup, save it somewhere else, and do these challenges on clean device**
 
 **Also since some docker tasks run on local network using vulnerable images, make sure the local network is safe**
