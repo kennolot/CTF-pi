@@ -29,6 +29,8 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
 
 Are user inputs sanitized?
 
@@ -38,6 +40,7 @@ Upload a file named `test.txt` for example.
 
 Answer: `/uploads/test.txt;cd hidden && cd admin && cat flag.txt`
 
+</details>
 
 ### Cleaning up
 
