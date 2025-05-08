@@ -31,6 +31,11 @@ When done with the tasks run `docker compose down` to remove the containers and 
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 We enter the IP the web server is running on and since we know it's a web application we can add a port 80, but this is not required as by default port 80 is used to access the http website(make sure you are at http, not https for this challenge).
 
 Now we should be greeted by a password prompt, our friend mentioned something about php, so we should check if we can reach the index.php. For that we can try adding `/index.php?source=1` after the port, so our current query looks something like `http://10.10.10.12:80/index.php?source=1`. Now we are able to see a source code and see the hardcoded password within, try entering it into the password prompt and we should get the flag.
+
+</details>
