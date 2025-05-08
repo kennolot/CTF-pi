@@ -43,6 +43,7 @@ Try finding examples of weak passwords online.
 
 There's a `inputs.txt` file under `answers/` that contains the passwords the script chooses from, they are common and weak.
 </details>
+
 ### Cleaning up
 
 After finding the `flag.txt`
