@@ -44,6 +44,9 @@ The challenge is completed when you gain access to the hacker account.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+  
 Open ports can be scanned with nmap.
 
 The error 404 might be fake.
@@ -52,7 +55,6 @@ Use gobuster to find which directory is being used actually.
 
 For GET request Try inputting  `?password=CTF`, you might notice it loading longer, the server processes it, so the inputted string is correct.
 
-
 For POST requests:
 ```
 curl -X POST http://10.10.10.67:8000/comunicator -F "password"="CTF"
@@ -60,6 +62,7 @@ curl -X POST http://10.10.10.67:8000/comunicator -F "password"="CTF"
 
 `server/app.py` will reveal the backend logic when you're truly stuck on this challenge.
 
+</details>
 
 ### Cleaning up
 
