@@ -27,9 +27,14 @@ Find the hidden debug info from webapp.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 We can see that the debug mode is enabled, there has to be a way to access it.
 
 There might be a subdirectory on the site.
+
+</details>
 
 ### Cleaning up
 
