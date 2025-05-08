@@ -42,6 +42,8 @@ CTRL+C to terminate/close the application.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
 Sender encodes the letters on by one into unicode.
 
 File accessible for both the python apps is `/app/answers/flag_encoded.txt`
@@ -49,3 +51,4 @@ File accessible for both the python apps is `/app/answers/flag_encoded.txt`
 `receive_flag.py` should use `chr()` to convert unicode into human readable form.
 
 There's an example code given in `answers/`
+</details>
