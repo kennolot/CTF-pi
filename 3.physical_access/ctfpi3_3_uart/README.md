@@ -74,12 +74,16 @@ Onto the actual challenge, for Pico write a code `read_flag.py`  that reads UART
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 When stuck you may read source code from `send_flag.py`.
 
 Check the comment on `send_flag.py`, if you get port errors or don't receive anything at all you may need to change serial port to your own, for Pi 5 it should be `/dev/ttyAMA0`.
 
 If you get stuck there's a solution file in `answers/`
 
+</details>
 
 ### Cleaning up
 
