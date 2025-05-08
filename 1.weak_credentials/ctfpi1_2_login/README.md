@@ -52,6 +52,9 @@ Also note: there are tools already made that do this exact thing, one of them is
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+  
 POST requests are used for login.
 
 The password is 3 lowercase characters long.
@@ -59,6 +62,8 @@ The password is 3 lowercase characters long.
 Linux command that will do the same thing as opening browser and clicking submit:
 
 `curl -X POST http://10.10.10.67 -F "password=ekr"`
+
+</details>
 
 ### Cleaning up
 
