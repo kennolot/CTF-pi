@@ -26,6 +26,11 @@ Find the flag in format CTFPI{..}.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+  
 What encryption is it? If you're not sure there are tools like hash analyzer online.
 
 Are there tools to crack this encryption online?
+
+</details>
