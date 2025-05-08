@@ -24,6 +24,8 @@ Read the flag.txt.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
 
 Can you figure out what os.popen does?
 
@@ -32,6 +34,8 @@ In the url bar try to enter `http://127.0.0.1:8080/ping?ip=127.0.0.1`
 Since it's using terminal to ping, can we reach further than just ping command?
 
 `http://127.0.0.1:8080/ping?ip=127.0.0.1;ls` (notice the ls command), now we also see files on the system, meaning we have terminal access, can you find the flag?
+
+</details>
 
 ### Cleaning up
 
