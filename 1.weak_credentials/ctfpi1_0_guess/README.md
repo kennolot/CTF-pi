@@ -33,6 +33,7 @@ NOTE! After running the script again it deletes the old ctf user and generates a
 
 <details>
 <summary>Click me</summary>
+
   
 `su - weakaccount1`
 
