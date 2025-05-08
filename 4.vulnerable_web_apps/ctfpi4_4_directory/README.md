@@ -30,11 +30,16 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 View the website's source code, there's a clue hidden there.
 
 The hidden flag directory can be found using tools like: `gobuster` `dirbuster` etc.
 
 It is not easily guessable and the tool might take some time to find the hidden dir.
+
+</details>
 
 ### Cleaning up
 
