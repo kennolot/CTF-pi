@@ -30,6 +30,9 @@ Find an existing vulnerability and exploit it(HTML injection), once you think yo
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 Google reveals that default Grafana port is 3000, and `hostname -I` reveals the IP, in my case the address to the service is: `10.10.10.67:3000`.
 
 Enter this into your URL bar of your browser and you land on Grafana login page. 
@@ -58,6 +61,8 @@ Now when you hover over the Title pop out you can see the Pwned or whatever imag
 However this still can pose a risk, not specifically in this version of Grafana but in general one way for an attacker to leverage HTML injection is to use InnerHTML. That means the attacker attaches an image which doesn't exist, and since it doesn't exist an onerror parameter executes and does something the attacker wants.
 
 On later versions of Grafana this vulnerability has been fixed, so keep your programs up to date.
+
+</details>
 
 ### Cleaning up
 
