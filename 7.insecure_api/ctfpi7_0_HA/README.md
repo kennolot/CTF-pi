@@ -37,6 +37,9 @@ Create a webhook via the web UI. Webhook should send a persistent notification.
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 While inside the Home Assistant dashboard go to Settings > Automations & scenes > Create Automation > Create new automation.
 
 When > Add trigger > Others > scroll until you see Webhook, click it.
@@ -53,6 +56,7 @@ Check the notifications on your Home Assistant dashboard. A device with no authe
 
 Check out the other triggers and conditions and try to find weaknesses in them.
 
+</details>
 
 ### Cleaning up
 
