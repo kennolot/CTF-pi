@@ -2,7 +2,7 @@
 
 ### Scenario
 
-In computing there's a phenomenon as race condition. They might not be easy to debug or even notice and there have been instances where a software flaw such has this was left unnoticed on a radiation therapy machine, and sadly led to loss of human lives. Another example was with GE Energy when their alarm subsystem had a race condition, making the alarming system to monitoring technicians unfunctional. This led to a blackout in 2003. https://en.wikipedia.org/wiki/Race_condition.
+In computing there's a phenomenon known as race condition. They might not be easy to debug or even notice and there have been instances where a software flaw such has this was left unnoticed on a radiation therapy machine, and sadly led to loss of human lives. Another example was with GE Energy when their alarm subsystem had a race condition, making the alarming system to monitoring technicians unfunctional. This led to a blackout in 2003. https://en.wikipedia.org/wiki/Race_condition.
 
 **What is a race condition?** Let's say we have a program that needs to wait exactly 0.000001 seconds to execute again, seems logical to put `delay(0.000001)`, but can we absolutely be sure this delay is precise every time? Depending on if the system uses scheduling, real-time interrupts or the delay function itself varies on something like CPU load, the delay might not always be truly what we want it to be.
 
