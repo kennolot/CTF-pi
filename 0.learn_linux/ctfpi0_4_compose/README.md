@@ -26,8 +26,10 @@ Find a way to run docker compose and find the flag.
 
 <details>
 <summary>Click me</summary>
+  
 ```
 docker compose up --build
 ```
 It prints out the flag.
+  
 </details>
