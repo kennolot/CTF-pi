@@ -28,11 +28,16 @@ REMEMBER! The flag characters are between two capital 'A' letters so "AsA" means
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
+
 python's `re` library is very useful here.
 
 A(.)A RegEx.
 
 The solution code is under `answers/`
+</details>
 
 ### Your own challenge
 
