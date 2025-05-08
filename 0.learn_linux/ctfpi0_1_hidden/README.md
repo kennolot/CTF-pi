@@ -26,7 +26,11 @@ Find the hidden flag.txt.
 
 ### Hints
 
+<details>
+<summary>Click me</summary>
+
 `ls -la` `cd` `cat`. `-a` flag will list all the files, even hidden.
+</details>
 
 ### Why is this a big deal?
 
