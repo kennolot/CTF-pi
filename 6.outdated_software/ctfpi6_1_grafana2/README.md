@@ -34,6 +34,9 @@ Once you have found the flag check if they match: `answers/flag.txt`.
 
 ### Steps to complete
 
+<details>
+<summary>Click me</summary>
+
 Google reveals that default Grafana port is 3000, and `hostname -I` reveals the IP, in my case the address to the service is: `10.10.10.67:3000`.
 
 Enter this into your URL bar of your browser and you land on Grafana login page. 
@@ -61,6 +64,8 @@ curl 'http://10.10.10.67:3000/public/plugins/zipkin/../../../../../../../../home
 ```
 
 What we just did is arbitrary path traversal, the user can input however many ../ they want so they get to the root directory, there's plenty of sensitive files like databases or device users with their password hashes, also private ssh keys, if attacker can reach these, then there's a high chance they can take control of everything on the Rasperry Pi in this case.
+
+</details>
 
 ### Cleaning up
 
