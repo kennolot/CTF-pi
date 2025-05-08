@@ -63,6 +63,9 @@ Try to decode and get flag in format CTFPI{..}
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 Read the source code `mqtt_encrypt.py` notice the comments.
 
 The variables contain sensitive keys, which help us breach this encryption.
@@ -73,6 +76,8 @@ There are multiple things going on, first AES, then base64. Do it in reverse to 
 
 
 `answers/answer/py` has a working solution.
+
+</details>
 
 ### Cleaning up
 
