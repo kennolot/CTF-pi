@@ -27,8 +27,12 @@ Reminder, the `answers` directory contains the real answer, it should be viewed 
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 Seems like there are a lot of logs and random junk folders to be searching manually. Use `grep` or `find` 
 
 Since we want to get further access to the device we might want to look for credentials. Or logs where some "user" is trying to log in.
 
 `grep -rw './device_logs' -e 'user'`
+</details>
