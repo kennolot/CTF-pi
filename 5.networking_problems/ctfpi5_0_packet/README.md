@@ -31,11 +31,16 @@ Read the packet's message.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 You are free to examine the source code for this challenge when stuck.
 
 Since we know it's broadcast, then is it TCP or UDP?
 
 Wireshark filter `udp.port == 1337`
+
+</details>
 
 ### Cleaning up
 
