@@ -31,8 +31,12 @@ Even though Remote code execution and thus root access could  be gained with the
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 https://www.vicarius.io/vsociety/posts/linguistic-lumberjack-memory-corruption-in-fluent-bit-cve-2024-4323
 
+</details>
 
 ### Cleaning up
 
