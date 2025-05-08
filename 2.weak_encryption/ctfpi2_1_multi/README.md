@@ -22,8 +22,13 @@ Each one is required to get the entire flag.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+  
 Hash analyze all the log.txt files
 
 Decryption could take up to 30 seconds for each file using online tools
 
 These are all well known encryptions.
+
+</details>
