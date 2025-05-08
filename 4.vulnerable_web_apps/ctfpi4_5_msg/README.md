@@ -33,7 +33,11 @@ Find the flag hidden in the file hosting web app.
 
 ### **Hints**
 
+<details>
+<summary>Click me</summary>
+
 View the website's source code
 
 View more developer tools like console, maybe something pops out.
 
+</details>
